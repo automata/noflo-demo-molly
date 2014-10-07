@@ -27,6 +27,12 @@
         -moz-transition: background-color 0.3s ease;
         -o-transition: background-color 0.3s ease;
         transition: background-color 0.3s ease;
+
+        -moz-transition: top 1s; 
+-webkit-transition: top 1s;  
+-ms-transition: all 1s;  
+-o-transition: all 1s;  
+transition: top 1s;  
   }
    #molly:hover {
         background-color: hsl(190, 99%, 49%);
@@ -126,12 +132,16 @@ transition: all 1s;
         color: black;
       }
 
-      #can,#vid {
+      #can,#vid,#canorig {
         position: absolute;
         top: 10%;
         left: 25%;
+        z-index: 100;
         /*width: 60%;*/
         /*width: 100%;*/
+      }
+      #canorig {
+        z-index: 0;
       }
       #start {
         position: absolute;
@@ -271,7 +281,7 @@ transition: all 1s;
       <div id="molly"></div>
       <video id="vid" width="640" height="480" autoplay></video>
       <canvas id="can" width="640" height="480"></canvas>
-      
+      <canvas id="canorig" width="640" height="480"></canvas>
       <!--
       <button id="start">start camera</button>
       <button id="prev">prev</button>

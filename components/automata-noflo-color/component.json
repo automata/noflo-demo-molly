@@ -1,0 +1,41 @@
+{
+  "name": "noflo-color",
+  "description": "Color manipulation for NoFlo.",
+  "author": "Vilson Vieira <vilson@void.cc>",
+  "repo": "vilson/noflo-color",
+  "version": "0.1.0",
+  "keywords": [],
+  "dependencies": {
+    "noflo/noflo": "*",
+    "harthur/color": "*"
+  },
+  "scripts": [
+    "index.js",
+    "lib/Arrayable.coffee",
+    "components/Transform.coffee",
+    "components/ConvertToHSL.coffee",
+    "components/ConvertToRGB.coffee",
+    "components/GetLuminosity.coffee",
+    "components/GetContrast.coffee",
+    "components/Mix.coffee",
+    "components/IsLight.coffee",
+    "components/IsDark.coffee",
+    "components/Chromatose.coffee"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "noflo": {
+    "components": {
+      "Chromatose": "components/Chromatose.coffee",
+      "ConvertToHSL": "components/ConvertToHSL.coffee",
+      "ConvertToRGB": "components/ConvertToRGB.coffee",
+      "GetContrast": "components/GetContrast.coffee",
+      "GetLuminosity": "components/GetLuminosity.coffee",
+      "IsDark": "components/IsDark.coffee",
+      "IsLight": "components/IsLight.coffee",
+      "Mix": "components/Mix.coffee",
+      "Transform": "components/Transform.coffee"
+    }
+  }
+}
