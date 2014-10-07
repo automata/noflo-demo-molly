@@ -1,0 +1,13 @@
+{
+  "name": "peerjs",
+  "description": "Simple peer-to-peer data and media using WebRTC.",
+  "repository": "forresto/component-peerjs",
+  "remotes": [
+    "https://raw.githubusercontent.com"
+  ],
+  "main": "peer.js",
+  "scripts": [
+    "peer.js"
+  ],
+  "repo": "https://raw.githubusercontent.com/forresto/component-peerjs"
+}

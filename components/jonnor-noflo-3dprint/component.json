@@ -1,0 +1,45 @@
+{
+  "name": "noflo-3dprint",
+  "description": "3d printing interfacing components for NoFlo",
+  "author": "Jon Nordby <jononor@gmail.com>",
+  "repo": "jonnor/noflo-3dprint",
+  "version": "0.0.1",
+  "keywords": [
+    "CAM",
+    "3dprinting",
+    "octoprint",
+    "shapeways",
+    "cura",
+    "3d printing",
+    "digital fabrication"
+  ],
+  "dependencies": {
+    "noflo/noflo": "*",
+    "visionmedia/superagent": "*"
+  },
+  "scripts": [
+    "components/ConnectService.coffee",
+    "components/Octoprint.coffee",
+    "index.js",
+    "components/PrintHeadCommand.coffee",
+    "components/CuraServer.coffee",
+    "components/Slice.coffee",
+    "components/UploadFile.coffee",
+    "components/SelectFile.coffee"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "noflo": {
+    "icon": "comments",
+    "components": {
+      "ConnectService": "components/ConnectService.coffee",
+      "CuraServer": "components/CuraServer.coffee",
+      "Octoprint": "components/Octoprint.coffee",
+      "PrintHeadCommand": "components/PrintHeadCommand.coffee",
+      "SelectFile": "components/SelectFile.coffee",
+      "Slice": "components/Slice.coffee",
+      "UploadFile": "components/UploadFile.coffee"
+    }
+  }
+}

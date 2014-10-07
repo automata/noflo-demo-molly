@@ -1,0 +1,24 @@
+{
+  "name": "jsfeat",
+  "description": "JavaScript Computer Vision library",
+  "author": "Eugene Zatepyakin",
+  "repo": "jonnor/jsfeat",
+  "version": "0.0.7",
+  "keywords": [
+    "computer vision",
+    "canvas",
+    "feature detection",
+    "haar cascade",
+    "face detection",
+    "object detection"
+  ],
+  "dependencies": {},
+  "main": "build/jsfeat.js",
+  "scripts": [
+    "build/jsfeat.js"
+  ],
+  "json": [],
+  "remotes": [
+    "https://raw.githubusercontent.com"
+  ]
+}

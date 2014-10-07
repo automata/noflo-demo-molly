@@ -1,0 +1,65 @@
+{
+  "name": "noflo-image",
+  "description": "Image processing utilities for NoFlo, browser and Node.js.",
+  "author": "Forrest Oliphant",
+  "repo": "noflo/noflo-image",
+  "version": "0.0.17",
+  "keywords": [],
+  "dependencies": {
+    "noflo/noflo": "*",
+    "visionmedia/superagent": "*",
+    "noflo/noflo-canvas": "*",
+    "noflo/noflo-core": "*",
+    "noflo/noflo-objects": "*",
+    "noflo/noflo-groups": "*",
+    "noflo/noflo-strings": "*",
+    "noflo/noflo-dom": "*",
+    "noflo/noflo-ajax": "*",
+    "jonnor/jsfeat": "*",
+    "jonnor/color-thief": "*"
+  },
+  "remotes": [
+    "https://raw.githubusercontent.com"
+  ],
+  "scripts": [
+    "components/CalculateAspectRatio.coffee",
+    "components/GetOrientation.coffee",
+    "components/Measure.coffee",
+    "components/ToFullscale.coffee",
+    "spec/testutils.coffee",
+    "index.js",
+    "components/CreateImage-node.coffee",
+    "components/CreateImage.coffee",
+    "components/GetFeaturesYAPE.coffee",
+    "components/FindFeatureFreeAreas.coffee",
+    "graphs/UrlToCanvas.json",
+    "spec/fixtures/textAnywhere/flickr-3178100324-original_small.jpg.corners.json",
+    "spec/fixtures/noText/flickr-8132786781-small.jpg.corners.json",
+    "spec/fixtures/textRegion/3010029968_02742a1aec_b.jpg.corners.json",
+    "components/GetHistogram.coffee",
+    "components/GetColors.coffee"
+  ],
+  "json": [
+    "component.json",
+    "graphs/UrlToCanvas.json",
+    "spec/fixtures/textAnywhere/flickr-3178100324-original_small.jpg.corners.json",
+    "spec/fixtures/noText/flickr-8132786781-small.jpg.corners.json",
+    "spec/fixtures/textRegion/3010029968_02742a1aec_b.jpg.corners.json"
+  ],
+  "noflo": {
+    "components": {
+      "CalculateAspectRatio": "components/CalculateAspectRatio.coffee",
+      "CreateImage": "components/CreateImage.coffee",
+      "FindFeatureFreeAreas": "components/FindFeatureFreeAreas.coffee",
+      "GetColors": "components/GetColors.coffee",
+      "GetFeaturesYAPE": "components/GetFeaturesYAPE.coffee",
+      "GetHistogram": "components/GetHistogram.coffee",
+      "GetOrientation": "components/GetOrientation.coffee",
+      "Measure": "components/Measure.coffee",
+      "ToFullscale": "components/ToFullscale.coffee"
+    },
+    "graphs": {
+      "UrlToCanvas": "graphs/UrlToCanvas.json"
+    }
+  }
+}

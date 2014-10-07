@@ -1,0 +1,58 @@
+{
+  "name": "noflo-demo-molly",
+  "description": "Molly demo",
+  "repo": "foo/noflo-demo-molly",
+  "keywords": [],
+  "dependencies": {
+    "noflo/noflo": "*",
+    "noflo/noflo-runtime-iframe": "*",
+
+    "noflo/noflo-core": "*",
+
+    "noflo/noflo-dom": "*",
+    "noflo/noflo-flow": "*",
+
+    "noflo/noflo-interaction": "*",
+    "noflo/noflo-localstorage": "*",
+
+    "noflo/noflo-objects": "*",
+
+
+
+    "noflo/noflo-strings": "*",
+
+    "noflo/noflo-indexeddb": "*",
+
+
+
+    "forresto/noflo-gum": "*",
+
+
+
+    "alfa256/noflo-prompts": "*",
+    "noflo/noflo-image": "*",
+    "noflo/noflo-ccv": "*",
+    "noflo/noflo-canvas": "*",
+    "automata/noflo-geometry": "*",
+
+
+
+
+
+
+
+    "automata/noflo-color": "*"
+  },
+ "scripts": [
+  "Photobooth.json"
+ ],
+ "json": [
+    "component.json",
+    "Photobooth.json"
+  ],
+  "noflo": {
+    "graphs": {
+      "Photobooth": "Photobooth.json"
+    }
+  }
+}

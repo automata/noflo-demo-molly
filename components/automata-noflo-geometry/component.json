@@ -1,0 +1,35 @@
+{
+  "name": "noflo-geometry",
+  "description": "Components for computational geometry.",
+  "author": "Vilson Vieira <vilson@void.cc>",
+  "repo": "vilson/noflo-geometry",
+  "version": "0.1.0",
+  "keywords": [
+    "geometry",
+    "computational-geometry",
+    "delaunay",
+    "delaunay-triangulation"
+  ],
+  "dependencies": {
+    "noflo/noflo": "*"
+  },
+  "scripts": [
+    "index.js",
+    "vendor/delaunay.js",
+    "vendor/poly2tri.min.js",
+    "vendor/rhill-voronoi-core.js",
+    "components/ConstrainedDelaunay.coffee",
+    "components/Delaunay.coffee",
+    "components/Voronoi.coffee"
+  ],
+  "noflo": {
+    "components": {
+      "ConstrainedDelaunay": "components/ConstrainedDelaunay.coffee",
+      "Delaunay": "components/Delaunay.coffee",
+      "Voronoi": "components/Voronoi.coffee"
+    }
+  },
+  "json": [
+    "component.json"
+  ]
+}

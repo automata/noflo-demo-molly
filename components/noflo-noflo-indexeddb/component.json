@@ -1,0 +1,64 @@
+{
+  "name": "noflo-indexeddb",
+  "description": "IndexedDB components for NoFlo",
+  "author": "Henri Bergius <henri.bergius@iki.fi>",
+  "repo": "noflo/noflo-indexeddb",
+  "version": "0.1.0",
+  "keywords": [],
+  "dependencies": {
+    "noflo/noflo": "*"
+  },
+  "remotes": [
+    "https://raw.githubusercontent.com"
+  ],
+  "scripts": [
+    "components/Open.coffee",
+    "components/Close.coffee",
+    "components/DeleteDatabase.coffee",
+    "components/CreateStore.coffee",
+    "components/CreateIndex.coffee",
+    "components/DeleteStore.coffee",
+    "components/UpgradeRouter.coffee",
+    "components/BeginTransaction.coffee",
+    "components/AbortTransaction.coffee",
+    "components/GetStore.coffee",
+    "components/GetIndex.coffee",
+    "components/Query.coffee",
+    "components/QueryOnly.coffee",
+    "components/QueryFrom.coffee",
+    "components/QueryTo.coffee",
+    "components/Put.coffee",
+    "components/Get.coffee",
+    "components/Delete.coffee",
+    "index.js"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "files": [
+    "vendor/IndexedDBShim.min.js"
+  ],
+  "noflo": {
+    "icon": "bitbucket",
+    "components": {
+      "AbortTransaction": "components/AbortTransaction.coffee",
+      "BeginTransaction": "components/BeginTransaction.coffee",
+      "Close": "components/Close.coffee",
+      "CreateIndex": "components/CreateIndex.coffee",
+      "CreateStore": "components/CreateStore.coffee",
+      "Delete": "components/Delete.coffee",
+      "DeleteDatabase": "components/DeleteDatabase.coffee",
+      "DeleteStore": "components/DeleteStore.coffee",
+      "Get": "components/Get.coffee",
+      "GetIndex": "components/GetIndex.coffee",
+      "GetStore": "components/GetStore.coffee",
+      "Open": "components/Open.coffee",
+      "Put": "components/Put.coffee",
+      "Query": "components/Query.coffee",
+      "QueryFrom": "components/QueryFrom.coffee",
+      "QueryOnly": "components/QueryOnly.coffee",
+      "QueryTo": "components/QueryTo.coffee",
+      "UpgradeRouter": "components/UpgradeRouter.coffee"
+    }
+  }
+}
