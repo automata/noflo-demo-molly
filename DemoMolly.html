@@ -8,23 +8,25 @@
   <body>
     <style>
   #molly {
-    color: #fff;
+  	color: #fff;
   }
   .hide {
-    display: none;
+  	display: none;
   }
   .show {
-    display: block;
+  	display: block;
   }
   .box {
-    width: 200px;
-    height: 200px;
+  	width: 200px;
+  	height: 200px;
   }
 </style>
 <div id="molly"></div>
+<section>
 <video id="vid" width="640" height="480" autoplay></video>
 <canvas id="can" width="640" height="480"></canvas>
 <canvas id="canorig" width="640" height="480"></canvas>
+</section>
     <script>
       var noflo = require('noflo');
       noflo.graph.loadJSON(require('noflo-demo-molly/DemoMolly.json'), function (graph) {

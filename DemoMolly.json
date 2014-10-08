@@ -5,7 +5,7 @@
         "project": "molly-demo-2",
         "environment": {
             "type": "noflo-browser",
-            "content": ""
+            "content": "<style>\n  #molly {\n  \tcolor: #fff;\n  }\n  .hide {\n  \tdisplay: none;\n  }\n  .show {\n  \tdisplay: block;\n  }\n  .box {\n  \twidth: 200px;\n  \theight: 200px;\n  }\n</style>\n<div id=\"molly\"></div>\n<section>\n<video id=\"vid\" width=\"640\" height=\"480\" autoplay></video>\n<canvas id=\"can\" width=\"640\" height=\"480\"></canvas>\n<canvas id=\"canorig\" width=\"640\" height=\"480\"></canvas>\n</section>"
         },
         "icon": "",
         "changed": true
@@ -50,19 +50,19 @@
         {
             "name": "face tracking",
             "nodes": [
-                "canvas/Draw_ozct1",
-                "canvas/Fill_r8rtv",
-                "canvas/Fill_ym6q8",
+                "Draw",
+                "Fill",
+                "Fill_vet12",
                 "canvas/MakeCircle_jejhm",
-                "canvas/MakeCircle_ljme4",
-                "canvas/Stroke_iwj1c",
-                "canvas/Stroke_us86r",
+                "Circle",
+                "Stroke_tywc3",
+                "Stroke",
                 "canvas/Transform_h26w2",
                 "ccv/FindFaces_xb0gh",
                 "core/Drop_zop84",
                 "core/Kick_lf0n5",
                 "core/Split_psmwd",
-                "geometry/Delaunay_wbfqq",
+                "Delaunay",
                 "image/GetFeaturesYAPE_qb9zv"
             ],
             "metadata": {
@@ -111,42 +111,6 @@
                 "core/MakeFunction_7rkjf",
                 "core/MakeFunction_ge2vz",
                 "math/Random_wqtzn"
-            ],
-            "metadata": {
-                "description": ""
-            }
-        },
-        {
-            "name": "box design",
-            "nodes": [
-                "Append",
-                "Append_jc7nh",
-                "Body",
-                "Box",
-                "Chromatose",
-                "Div",
-                "H2",
-                "H3",
-                "Meta",
-                "P",
-                "SendColors",
-                "SetBgColor",
-                "SetClass",
-                "SetColor",
-                "SetHtml",
-                "SetHtml_o44qr",
-                "SetStyle",
-                "SetStyle_fx6jw",
-                "Split",
-                "Text",
-                "core/Kick_ildyp",
-                "core/MakeFunction_9cpa0",
-                "core/MakeFunction_jarg2",
-                "dom/AppendChild_ddhhf",
-                "dom/AppendChild_zwdch",
-                "dom/SetAttribute_7ybkg",
-                "dom/SetAttribute_zhay3",
-                "dom/WriteHtml_wl0id"
             ],
             "metadata": {
                 "description": ""
@@ -389,8 +353,8 @@
             "component": "dom/CreateElement",
             "metadata": {
                 "label": "Div",
-                "x": 2088,
-                "y": -288,
+                "x": 2232,
+                "y": -252,
                 "width": 72,
                 "height": 72
             }
@@ -399,8 +363,8 @@
             "component": "dom/AppendChild",
             "metadata": {
                 "label": "Append",
-                "x": 2484,
-                "y": -216,
+                "x": 2628,
+                "y": -180,
                 "width": 72,
                 "height": 72
             }
@@ -409,8 +373,8 @@
             "component": "dom/GetElement",
             "metadata": {
                 "label": "Body",
-                "x": 2484,
-                "y": -324,
+                "x": 2628,
+                "y": -288,
                 "width": 72,
                 "height": 72
             }
@@ -419,8 +383,8 @@
             "component": "dom/SetAttribute",
             "metadata": {
                 "label": "SetStyle",
-                "x": 2196,
-                "y": -288,
+                "x": 2340,
+                "y": -252,
                 "width": 72,
                 "height": 72
             }
@@ -429,8 +393,8 @@
             "component": "core/MakeFunction",
             "metadata": {
                 "label": "SetBgColor",
-                "x": 2196,
-                "y": -180,
+                "x": 2340,
+                "y": -144,
                 "width": 72,
                 "height": 72
             }
@@ -439,8 +403,8 @@
             "component": "dom/SetAttribute",
             "metadata": {
                 "label": "SetClass",
-                "x": 2304,
-                "y": -288,
+                "x": 2448,
+                "y": -252,
                 "width": 72,
                 "height": 72
             }
@@ -449,8 +413,8 @@
             "component": "core/Kick",
             "metadata": {
                 "label": "SendColors",
-                "x": 1764,
-                "y": -288,
+                "x": 1908,
+                "y": -252,
                 "width": 72,
                 "height": 72
             }
@@ -459,8 +423,8 @@
             "component": "ccv/FindFaces",
             "metadata": {
                 "label": "ccv/FindFaces",
-                "x": 1296,
-                "y": 1296,
+                "x": 1080,
+                "y": 1368,
                 "width": 72,
                 "height": 72
             }
@@ -469,7 +433,7 @@
             "component": "core/Kick",
             "metadata": {
                 "label": "core/Kick",
-                "x": 1044,
+                "x": 1008,
                 "y": 1188,
                 "width": 72,
                 "height": 72
@@ -495,22 +459,22 @@
                 "height": 72
             }
         },
-        "canvas/Draw_ozct1": {
+        "Draw": {
             "component": "canvas/Draw",
             "metadata": {
-                "label": "canvas/Draw",
-                "x": 2016,
-                "y": 1296,
+                "label": "Draw",
+                "x": 1980,
+                "y": 1188,
                 "width": 72,
                 "height": 72
             }
         },
-        "canvas/Stroke_iwj1c": {
+        "Stroke_tywc3": {
             "component": "canvas/Stroke",
             "metadata": {
-                "label": "canvas/Stroke",
-                "x": 1692,
-                "y": 1296,
+                "label": "Stroke",
+                "x": 1620,
+                "y": 1368,
                 "width": 72,
                 "height": 72
             }
@@ -519,8 +483,8 @@
             "component": "image/GetFeaturesYAPE",
             "metadata": {
                 "label": "image/GetFeaturesYAPE",
-                "x": 1296,
-                "y": 1404,
+                "x": 1080,
+                "y": 1476,
                 "width": 72,
                 "height": 72
             }
@@ -529,8 +493,8 @@
             "component": "core/Drop",
             "metadata": {
                 "label": "core/Drop",
-                "x": 1296,
-                "y": 1512,
+                "x": 1080,
+                "y": 1584,
                 "width": 72,
                 "height": 72
             }
@@ -539,48 +503,48 @@
             "component": "core/Split",
             "metadata": {
                 "label": "core/Split",
-                "x": 1152,
+                "x": 1116,
                 "y": 1188,
                 "width": 72,
                 "height": 72
             }
         },
-        "canvas/MakeCircle_ljme4": {
+        "Circle": {
             "component": "canvas/MakeCircle",
             "metadata": {
-                "label": "canvas/MakeCircle",
-                "x": 1584,
-                "y": 1404,
+                "label": "Circle",
+                "x": 1512,
+                "y": 1476,
                 "width": 72,
                 "height": 72
             }
         },
-        "canvas/Fill_ym6q8": {
+        "Fill_vet12": {
             "component": "canvas/Fill",
             "metadata": {
-                "label": "canvas/Fill",
-                "x": 1692,
-                "y": 1404,
+                "label": "Fill",
+                "x": 1620,
+                "y": 1476,
                 "width": 72,
                 "height": 72
             }
         },
-        "geometry/Delaunay_wbfqq": {
+        "Delaunay": {
             "component": "geometry/Delaunay",
             "metadata": {
-                "label": "geometry/Delaunay",
-                "x": 1584,
-                "y": 1512,
+                "label": "Delaunay",
+                "x": 1512,
+                "y": 1584,
                 "width": 72,
                 "height": 72
             }
         },
-        "canvas/Stroke_us86r": {
+        "Stroke": {
             "component": "canvas/Stroke",
             "metadata": {
-                "label": "canvas/Stroke",
-                "x": 1692,
-                "y": 1512,
+                "label": "Stroke",
+                "x": 1620,
+                "y": 1584,
                 "width": 72,
                 "height": 72
             }
@@ -589,8 +553,8 @@
             "component": "canvas/MakeCircle",
             "metadata": {
                 "label": "canvas/MakeCircle",
-                "x": 1476,
-                "y": 1296,
+                "x": 1404,
+                "y": 1692,
                 "width": 72,
                 "height": 72
             }
@@ -629,18 +593,18 @@
             "component": "canvas/Transform",
             "metadata": {
                 "label": "canvas/Transform",
-                "x": 1584,
-                "y": 1296,
+                "x": 1512,
+                "y": 1692,
                 "width": 72,
                 "height": 72
             }
         },
-        "canvas/Fill_r8rtv": {
+        "Fill": {
             "component": "canvas/Fill",
             "metadata": {
-                "label": "canvas/Fill",
-                "x": 1800,
-                "y": 1296,
+                "label": "Fill",
+                "x": 1728,
+                "y": 1368,
                 "width": 72,
                 "height": 72
             }
@@ -669,8 +633,8 @@
             "component": "color/Chromatose",
             "metadata": {
                 "label": "Chromatose",
-                "x": 1872,
-                "y": -288,
+                "x": 2016,
+                "y": -252,
                 "width": 72,
                 "height": 72
             }
@@ -679,8 +643,8 @@
             "component": "objects/GetObjectKey",
             "metadata": {
                 "label": "Box",
-                "x": 2088,
-                "y": -180,
+                "x": 2232,
+                "y": -144,
                 "width": 72,
                 "height": 72
             }
@@ -689,8 +653,8 @@
             "component": "core/Kick",
             "metadata": {
                 "label": "core/Kick",
-                "x": 2088,
-                "y": 180,
+                "x": 1836,
+                "y": 1008,
                 "width": 72,
                 "height": 72
             }
@@ -819,8 +783,8 @@
             "component": "dom/AppendChild",
             "metadata": {
                 "label": "Append",
-                "x": 2484,
-                "y": -72,
+                "x": 2628,
+                "y": -36,
                 "width": 72,
                 "height": 72
             }
@@ -829,8 +793,8 @@
             "component": "dom/CreateElement",
             "metadata": {
                 "label": "H2",
-                "x": 2340,
-                "y": 36,
+                "x": 2484,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -839,8 +803,8 @@
             "component": "dom/WriteHtml",
             "metadata": {
                 "label": "SetHtml",
-                "x": 2484,
-                "y": 36,
+                "x": 2628,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -849,8 +813,8 @@
             "component": "objects/GetObjectKey",
             "metadata": {
                 "label": "Text",
-                "x": 2088,
-                "y": -72,
+                "x": 2232,
+                "y": -36,
                 "width": 72,
                 "height": 72
             }
@@ -859,8 +823,8 @@
             "component": "core/Split",
             "metadata": {
                 "label": "Split",
-                "x": 1980,
-                "y": -288,
+                "x": 2124,
+                "y": -252,
                 "width": 72,
                 "height": 72
             }
@@ -869,8 +833,8 @@
             "component": "dom/SetAttribute",
             "metadata": {
                 "label": "SetStyle",
-                "x": 2484,
-                "y": 144,
+                "x": 2628,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -879,8 +843,8 @@
             "component": "core/MakeFunction",
             "metadata": {
                 "label": "SetColor",
-                "x": 2196,
-                "y": -72,
+                "x": 2340,
+                "y": -36,
                 "width": 72,
                 "height": 72
             }
@@ -889,8 +853,8 @@
             "component": "objects/GetObjectKey",
             "metadata": {
                 "label": "Meta",
-                "x": 2088,
-                "y": 36,
+                "x": 2232,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -899,8 +863,8 @@
             "component": "core/MakeFunction",
             "metadata": {
                 "label": "SetColor",
-                "x": 2196,
-                "y": 36,
+                "x": 2340,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -909,8 +873,8 @@
             "component": "dom/CreateElement",
             "metadata": {
                 "label": "H3",
-                "x": 2340,
-                "y": 324,
+                "x": 2484,
+                "y": 360,
                 "width": 72,
                 "height": 72
             }
@@ -919,8 +883,8 @@
             "component": "dom/AppendChild",
             "metadata": {
                 "label": "Append",
-                "x": 2484,
-                "y": 252,
+                "x": 2628,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
@@ -929,8 +893,8 @@
             "component": "dom/WriteHtml",
             "metadata": {
                 "label": "SetHtml",
-                "x": 2484,
-                "y": 360,
+                "x": 2628,
+                "y": 396,
                 "width": 72,
                 "height": 72
             }
@@ -939,8 +903,8 @@
             "component": "dom/SetAttribute",
             "metadata": {
                 "label": "SetStyle",
-                "x": 2484,
-                "y": 468,
+                "x": 2628,
+                "y": 504,
                 "width": 72,
                 "height": 72
             }
@@ -949,8 +913,8 @@
             "component": "dom/CreateElement",
             "metadata": {
                 "label": "P",
-                "x": 2340,
-                "y": 684,
+                "x": 2484,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -959,8 +923,8 @@
             "component": "dom/AppendChild",
             "metadata": {
                 "label": "Append",
-                "x": 2484,
-                "y": 612,
+                "x": 2628,
+                "y": 648,
                 "width": 72,
                 "height": 72
             }
@@ -969,8 +933,8 @@
             "component": "dom/WriteHtml",
             "metadata": {
                 "label": "SetHtml",
-                "x": 2484,
-                "y": 720,
+                "x": 2628,
+                "y": 756,
                 "width": 72,
                 "height": 72
             }
@@ -979,8 +943,8 @@
             "component": "dom/SetAttribute",
             "metadata": {
                 "label": "SetStyle",
-                "x": 2484,
-                "y": 828,
+                "x": 2628,
+                "y": 864,
                 "width": 72,
                 "height": 72
             }
@@ -989,8 +953,8 @@
             "component": "core/MakeFunction",
             "metadata": {
                 "label": "core/MakeFunction",
-                "x": 2196,
-                "y": 180,
+                "x": 1980,
+                "y": 1008,
                 "width": 72,
                 "height": 72
             }
@@ -999,38 +963,18 @@
             "component": "canvas/DrawImage",
             "metadata": {
                 "label": "canvas/DrawImage",
-                "x": 1584,
-                "y": 1188,
+                "x": 1512,
+                "y": 1152,
                 "width": 72,
                 "height": 72
             }
         },
-        "core/RepeatDelayed_o42yj": {
+        "Delay": {
             "component": "core/RepeatDelayed",
             "metadata": {
-                "label": "core/RepeatDelayed",
-                "x": 1800,
-                "y": 1404,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/RepeatDelayed_nbi9a": {
-            "component": "core/RepeatDelayed",
-            "metadata": {
-                "label": "core/RepeatDelayed",
-                "x": 1800,
-                "y": 1512,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/RepeatDelayed_terih": {
-            "component": "core/RepeatDelayed",
-            "metadata": {
-                "label": "core/RepeatDelayed",
-                "x": 1908,
-                "y": 1296,
+                "label": "Delay",
+                "x": 1872,
+                "y": 1368,
                 "width": 72,
                 "height": 72
             }
@@ -1179,8 +1123,8 @@
             "component": "math/Random",
             "metadata": {
                 "label": "math/Random",
-                "x": 1980,
-                "y": 468,
+                "x": 2196,
+                "y": 1116,
                 "width": 72,
                 "height": 72
             }
@@ -1189,8 +1133,8 @@
             "component": "core/MakeFunction",
             "metadata": {
                 "label": "core/MakeFunction",
-                "x": 2088,
-                "y": 468,
+                "x": 2304,
+                "y": 1116,
                 "width": 72,
                 "height": 72
             }
@@ -1199,8 +1143,98 @@
             "component": "core/MakeFunction",
             "metadata": {
                 "label": "core/MakeFunction",
-                "x": 2196,
-                "y": 468,
+                "x": 2412,
+                "y": 1116,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RepeatDelayed_1u0r2": {
+            "component": "core/RepeatDelayed",
+            "metadata": {
+                "label": "core/RepeatDelayed",
+                "x": 1764,
+                "y": 1476,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RepeatDelayed_tjh81": {
+            "component": "core/RepeatDelayed",
+            "metadata": {
+                "label": "core/RepeatDelayed",
+                "x": 1764,
+                "y": 1584,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/MakeFunction_ddcgu": {
+            "component": "core/MakeFunction",
+            "metadata": {
+                "label": "core/MakeFunction",
+                "x": 1188,
+                "y": 1368,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "canvas/MakeRectangle_uh13k": {
+            "component": "canvas/MakeRectangle",
+            "metadata": {
+                "label": "canvas/MakeRectangle",
+                "x": 1512,
+                "y": 1368,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "width": {
+            "component": "objects/GetObjectKey",
+            "metadata": {
+                "label": "width",
+                "x": 1332,
+                "y": 1404,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "height": {
+            "component": "objects/GetObjectKey",
+            "metadata": {
+                "label": "height",
+                "x": 1332,
+                "y": 1512,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "y": {
+            "component": "objects/GetObjectKey",
+            "metadata": {
+                "label": "y",
+                "x": 1332,
+                "y": 1296,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "x": {
+            "component": "objects/GetObjectKey",
+            "metadata": {
+                "label": "x",
+                "x": 1332,
+                "y": 1188,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "canvas/MakePoint_xwbc8": {
+            "component": "canvas/MakePoint",
+            "metadata": {
+                "label": "canvas/MakePoint",
+                "x": 1476,
+                "y": 1260,
                 "width": 72,
                 "height": 72
             }
@@ -1677,7 +1711,7 @@
                 "port": "corners"
             },
             "tgt": {
-                "process": "canvas/MakeCircle_ljme4",
+                "process": "Circle",
                 "port": "center"
             },
             "metadata": {
@@ -1686,11 +1720,11 @@
         },
         {
             "src": {
-                "process": "canvas/MakeCircle_ljme4",
+                "process": "Circle",
                 "port": "circle"
             },
             "tgt": {
-                "process": "canvas/Fill_ym6q8",
+                "process": "Fill_vet12",
                 "port": "items"
             },
             "metadata": {}
@@ -1701,7 +1735,7 @@
                 "port": "corners"
             },
             "tgt": {
-                "process": "geometry/Delaunay_wbfqq",
+                "process": "Delaunay",
                 "port": "points"
             },
             "metadata": {
@@ -1710,27 +1744,14 @@
         },
         {
             "src": {
-                "process": "geometry/Delaunay_wbfqq",
+                "process": "Delaunay",
                 "port": "paths"
             },
             "tgt": {
-                "process": "canvas/Stroke_us86r",
+                "process": "Stroke",
                 "port": "items"
             },
             "metadata": {}
-        },
-        {
-            "src": {
-                "process": "ccv/FindFaces_xb0gh",
-                "port": "faces"
-            },
-            "tgt": {
-                "process": "canvas/MakeCircle_jejhm",
-                "port": "center"
-            },
-            "metadata": {
-                "route": 0
-            }
         },
         {
             "src": {
@@ -1797,22 +1818,11 @@
         },
         {
             "src": {
-                "process": "canvas/Transform_h26w2",
-                "port": "transform"
-            },
-            "tgt": {
-                "process": "canvas/Stroke_iwj1c",
-                "port": "items"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "canvas/Stroke_iwj1c",
+                "process": "Stroke_tywc3",
                 "port": "stroke"
             },
             "tgt": {
-                "process": "canvas/Fill_r8rtv",
+                "process": "Fill",
                 "port": "items"
             },
             "metadata": {
@@ -2524,86 +2534,16 @@
         },
         {
             "src": {
-                "process": "canvas/DrawImage_f4dop",
-                "port": "drawimage"
-            },
-            "tgt": {
-                "process": "canvas/Draw_ozct1",
-                "port": "commands"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "canvas/Fill_ym6q8",
+                "process": "Fill",
                 "port": "fill"
             },
             "tgt": {
-                "process": "core/RepeatDelayed_o42yj",
+                "process": "Delay",
                 "port": "in"
             },
             "metadata": {
                 "route": null
             }
-        },
-        {
-            "src": {
-                "process": "canvas/Stroke_us86r",
-                "port": "stroke"
-            },
-            "tgt": {
-                "process": "core/RepeatDelayed_nbi9a",
-                "port": "in"
-            },
-            "metadata": {
-                "route": null
-            }
-        },
-        {
-            "src": {
-                "process": "canvas/Fill_r8rtv",
-                "port": "fill"
-            },
-            "tgt": {
-                "process": "core/RepeatDelayed_terih",
-                "port": "in"
-            },
-            "metadata": {
-                "route": null
-            }
-        },
-        {
-            "src": {
-                "process": "core/RepeatDelayed_o42yj",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "canvas/Draw_ozct1",
-                "port": "commands"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "core/RepeatDelayed_nbi9a",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "canvas/Draw_ozct1",
-                "port": "commands"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "core/RepeatDelayed_terih",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "canvas/Draw_ozct1",
-                "port": "commands"
-            },
-            "metadata": {}
         },
         {
             "src": {
@@ -2611,7 +2551,7 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "canvas/Draw_ozct1",
+                "process": "Draw",
                 "port": "canvas"
             },
             "metadata": {
@@ -2924,6 +2864,209 @@
             }
         },
         {
+            "src": {
+                "process": "canvas/DrawImage_f4dop",
+                "port": "drawimage"
+            },
+            "tgt": {
+                "process": "Draw",
+                "port": "commands"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "Fill_vet12",
+                "port": "fill"
+            },
+            "tgt": {
+                "process": "core/RepeatDelayed_1u0r2",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "core/RepeatDelayed_1u0r2",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "Draw",
+                "port": "commands"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "Stroke",
+                "port": "stroke"
+            },
+            "tgt": {
+                "process": "core/RepeatDelayed_tjh81",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "core/RepeatDelayed_tjh81",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "Draw",
+                "port": "commands"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "Delay",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "Draw",
+                "port": "commands"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "ccv/FindFaces_xb0gh",
+                "port": "faces"
+            },
+            "tgt": {
+                "process": "core/MakeFunction_ddcgu",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/MakeFunction_ddcgu",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "x",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/MakeFunction_ddcgu",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "y",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/MakeFunction_ddcgu",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "width",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/MakeFunction_ddcgu",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "height",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "x",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "canvas/MakePoint_xwbc8",
+                "port": "x"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "y",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "canvas/MakePoint_xwbc8",
+                "port": "y"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "canvas/MakePoint_xwbc8",
+                "port": "point"
+            },
+            "tgt": {
+                "process": "canvas/MakeRectangle_uh13k",
+                "port": "point"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "width",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "canvas/MakeRectangle_uh13k",
+                "port": "width"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "height",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "canvas/MakeRectangle_uh13k",
+                "port": "height"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "canvas/MakeRectangle_uh13k",
+                "port": "rectangle"
+            },
+            "tgt": {
+                "process": "Stroke_tywc3",
+                "port": "items"
+            },
+            "metadata": {}
+        },
+        {
             "data": "#molly",
             "tgt": {
                 "process": "dom/GetElement_6hmxd",
@@ -3041,49 +3184,49 @@
         {
             "data": true,
             "tgt": {
-                "process": "canvas/Draw_ozct1",
+                "process": "Draw",
                 "port": "drawevery"
             }
         },
         {
             "data": 2,
             "tgt": {
-                "process": "canvas/MakeCircle_ljme4",
+                "process": "Circle",
                 "port": "radius"
             }
         },
         {
             "data": 1,
             "tgt": {
-                "process": "canvas/Stroke_us86r",
+                "process": "Stroke",
                 "port": "linewidth"
             }
         },
         {
             "data": 1,
             "tgt": {
-                "process": "canvas/Stroke_iwj1c",
+                "process": "Stroke_tywc3",
                 "port": "linewidth"
             }
         },
         {
             "data": "rgba(255,255,255,0.2)",
             "tgt": {
-                "process": "canvas/Stroke_us86r",
+                "process": "Stroke",
                 "port": "strokestyle"
             }
         },
         {
             "data": "rgba(255,255,255,0.2)",
             "tgt": {
-                "process": "canvas/Fill_ym6q8",
+                "process": "Fill_vet12",
                 "port": "fillstyle"
             }
         },
         {
             "data": false,
             "tgt": {
-                "process": "canvas/Stroke_iwj1c",
+                "process": "Stroke_tywc3",
                 "port": "closepath"
             }
         },
@@ -3104,14 +3247,14 @@
         {
             "data": "rgba(255,255,255,0.2)",
             "tgt": {
-                "process": "canvas/Fill_r8rtv",
+                "process": "Fill",
                 "port": "fillstyle"
             }
         },
         {
             "data": "rgba(255,255,255,0.3)",
             "tgt": {
-                "process": "canvas/Stroke_iwj1c",
+                "process": "Stroke_tywc3",
                 "port": "strokestyle"
             }
         },
@@ -3275,7 +3418,7 @@
         {
             "data": false,
             "tgt": {
-                "process": "canvas/Draw_ozct1",
+                "process": "Draw",
                 "port": "clearevery"
             }
         },
@@ -3287,27 +3430,6 @@
             "tgt": {
                 "process": "canvas/DrawImage_f4dop",
                 "port": "destpoint"
-            }
-        },
-        {
-            "data": 500,
-            "tgt": {
-                "process": "core/RepeatDelayed_o42yj",
-                "port": "delay"
-            }
-        },
-        {
-            "data": 1000,
-            "tgt": {
-                "process": "core/RepeatDelayed_nbi9a",
-                "port": "delay"
-            }
-        },
-        {
-            "data": 1500,
-            "tgt": {
-                "process": "core/RepeatDelayed_terih",
-                "port": "delay"
             }
         },
         {
@@ -3451,6 +3573,62 @@
             "tgt": {
                 "process": "state access cam",
                 "port": "string"
+            }
+        },
+        {
+            "data": 500,
+            "tgt": {
+                "process": "core/RepeatDelayed_1u0r2",
+                "port": "delay"
+            }
+        },
+        {
+            "data": 1500,
+            "tgt": {
+                "process": "Delay",
+                "port": "delay"
+            }
+        },
+        {
+            "data": 1000,
+            "tgt": {
+                "process": "core/RepeatDelayed_tjh81",
+                "port": "delay"
+            }
+        },
+        {
+            "data": "return x[0];",
+            "tgt": {
+                "process": "core/MakeFunction_ddcgu",
+                "port": "function"
+            }
+        },
+        {
+            "data": "width",
+            "tgt": {
+                "process": "width",
+                "port": "key"
+            }
+        },
+        {
+            "data": "height",
+            "tgt": {
+                "process": "height",
+                "port": "key"
+            }
+        },
+        {
+            "data": "x",
+            "tgt": {
+                "process": "x",
+                "port": "key"
+            }
+        },
+        {
+            "data": "y",
+            "tgt": {
+                "process": "y",
+                "port": "key"
             }
         }
     ]
