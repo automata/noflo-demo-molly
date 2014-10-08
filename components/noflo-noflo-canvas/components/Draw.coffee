@@ -18,15 +18,12 @@ class Draw extends noflo.LoggingComponent
       clearevery: new noflo.Port 'boolean'
       canvas: new noflo.Port 'object'
       commands: new noflo.ArrayPort 'object'
-      #clearCommands: new noflo.Port 'bang'
 
     @outPorts = new noflo.OutPorts
       canvas:
         datatype: 'object'
         required: false
 
-    # @inPorts.clearCommands.on 'data', (clear) =>
-    #   return
     @inPorts.tick.on 'data', (tick) =>
       if @context
         @parse @commands
@@ -50,6 +47,7 @@ class Draw extends noflo.LoggingComponent
       @clearevery = data
 
     @inPorts.canvas.on 'data', (canvas) =>
+      @canvas = canvas
       @context = canvas.getContext '2d'
       
     @inPorts.commands.on 'data', (commands, i) =>

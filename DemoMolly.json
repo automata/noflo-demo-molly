@@ -3745,7 +3745,7 @@
             }
         },
         {
-            "data": "return Math.round(x*8);",
+            "data": "return Math.round(x*7);",
             "tgt": {
                 "process": "core/MakeFunction_7rkjf",
                 "port": "function"
