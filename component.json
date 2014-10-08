@@ -8,7 +8,7 @@
     "noflo/noflo-runtime-iframe": "*",
 
     "noflo/noflo-core": "*",
-
+    "noflo/noflo-math": "*",
     "noflo/noflo-dom": "*",
     "noflo/noflo-flow": "*",
 

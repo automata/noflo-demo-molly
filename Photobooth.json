@@ -119,6 +119,17 @@
             "metadata": {
                 "description": ""
             }
+        },
+        {
+            "name": "lipsum",
+            "nodes": [
+                "core/MakeFunction_7rkjf",
+                "core/MakeFunction_ge2vz",
+                "math/Random_wqtzn"
+            ],
+            "metadata": {
+                "description": ""
+            }
         }
     ],
     "processes": {
@@ -417,7 +428,7 @@
             "metadata": {
                 "label": "ccv/FindFaces",
                 "x": 1296,
-                "y": 1188,
+                "y": 1296,
                 "width": 72,
                 "height": 72
             }
@@ -427,7 +438,7 @@
             "metadata": {
                 "label": "core/Kick",
                 "x": 1044,
-                "y": 1080,
+                "y": 1188,
                 "width": 72,
                 "height": 72
             }
@@ -457,7 +468,7 @@
             "metadata": {
                 "label": "canvas/Draw",
                 "x": 2016,
-                "y": 1188,
+                "y": 1296,
                 "width": 72,
                 "height": 72
             }
@@ -467,7 +478,7 @@
             "metadata": {
                 "label": "canvas/Stroke",
                 "x": 1692,
-                "y": 1188,
+                "y": 1296,
                 "width": 72,
                 "height": 72
             }
@@ -477,7 +488,7 @@
             "metadata": {
                 "label": "image/GetFeaturesYAPE",
                 "x": 1296,
-                "y": 1296,
+                "y": 1404,
                 "width": 72,
                 "height": 72
             }
@@ -487,7 +498,7 @@
             "metadata": {
                 "label": "core/Drop",
                 "x": 1296,
-                "y": 1404,
+                "y": 1512,
                 "width": 72,
                 "height": 72
             }
@@ -497,7 +508,7 @@
             "metadata": {
                 "label": "core/Split",
                 "x": 1152,
-                "y": 1080,
+                "y": 1188,
                 "width": 72,
                 "height": 72
             }
@@ -507,7 +518,7 @@
             "metadata": {
                 "label": "canvas/MakeCircle",
                 "x": 1584,
-                "y": 1296,
+                "y": 1404,
                 "width": 72,
                 "height": 72
             }
@@ -517,7 +528,7 @@
             "metadata": {
                 "label": "canvas/Fill",
                 "x": 1692,
-                "y": 1296,
+                "y": 1404,
                 "width": 72,
                 "height": 72
             }
@@ -527,7 +538,7 @@
             "metadata": {
                 "label": "geometry/Delaunay",
                 "x": 1584,
-                "y": 1404,
+                "y": 1512,
                 "width": 72,
                 "height": 72
             }
@@ -537,7 +548,7 @@
             "metadata": {
                 "label": "canvas/Stroke",
                 "x": 1692,
-                "y": 1404,
+                "y": 1512,
                 "width": 72,
                 "height": 72
             }
@@ -547,7 +558,7 @@
             "metadata": {
                 "label": "canvas/MakeCircle",
                 "x": 1476,
-                "y": 1188,
+                "y": 1296,
                 "width": 72,
                 "height": 72
             }
@@ -587,7 +598,7 @@
             "metadata": {
                 "label": "canvas/Transform",
                 "x": 1584,
-                "y": 1188,
+                "y": 1296,
                 "width": 72,
                 "height": 72
             }
@@ -597,7 +608,7 @@
             "metadata": {
                 "label": "canvas/Fill",
                 "x": 1800,
-                "y": 1188,
+                "y": 1296,
                 "width": 72,
                 "height": 72
             }
@@ -957,7 +968,7 @@
             "metadata": {
                 "label": "canvas/DrawImage",
                 "x": 1584,
-                "y": 1080,
+                "y": 1188,
                 "width": 72,
                 "height": 72
             }
@@ -967,7 +978,7 @@
             "metadata": {
                 "label": "core/RepeatDelayed",
                 "x": 1800,
-                "y": 1296,
+                "y": 1404,
                 "width": 72,
                 "height": 72
             }
@@ -977,7 +988,7 @@
             "metadata": {
                 "label": "core/RepeatDelayed",
                 "x": 1800,
-                "y": 1404,
+                "y": 1512,
                 "width": 72,
                 "height": 72
             }
@@ -987,7 +998,7 @@
             "metadata": {
                 "label": "core/RepeatDelayed",
                 "x": 1908,
-                "y": 1188,
+                "y": 1296,
                 "width": 72,
                 "height": 72
             }
@@ -1128,6 +1139,36 @@
                 "label": "core/Kick",
                 "x": 1224,
                 "y": -180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "math/Random_wqtzn": {
+            "component": "math/Random",
+            "metadata": {
+                "label": "math/Random",
+                "x": 1944,
+                "y": 1008,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/MakeFunction_7rkjf": {
+            "component": "core/MakeFunction",
+            "metadata": {
+                "label": "core/MakeFunction",
+                "x": 2052,
+                "y": 1008,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/MakeFunction_ge2vz": {
+            "component": "core/MakeFunction",
+            "metadata": {
+                "label": "core/MakeFunction",
+                "x": 2160,
+                "y": 1008,
                 "width": 72,
                 "height": 72
             }
@@ -2801,6 +2842,56 @@
             }
         },
         {
+            "src": {
+                "process": "math/Random_wqtzn",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/MakeFunction_7rkjf",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/MakeFunction_7rkjf",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/MakeFunction_ge2vz",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "core/MakeFunction_ge2vz",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "dom/WriteHtml_wl0id",
+                "port": "html"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/MakeFunction_9cpa0",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "math/Random_wqtzn",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
             "data": "#molly",
             "tgt": {
                 "process": "dom/GetElement_6hmxd",
@@ -3094,13 +3185,6 @@
             }
         },
         {
-            "data": "Holy ball smoking batman",
-            "tgt": {
-                "process": "SetHtml",
-                "port": "html"
-            }
-        },
-        {
             "data": "text",
             "tgt": {
                 "process": "Text",
@@ -3143,24 +3227,10 @@
             }
         },
         {
-            "data": "Post From Twitter",
-            "tgt": {
-                "process": "SetHtml_o44qr",
-                "port": "html"
-            }
-        },
-        {
             "data": "style",
             "tgt": {
                 "process": "dom/SetAttribute_7ybkg",
                 "port": "attribute"
-            }
-        },
-        {
-            "data": "Once upon a vibrant color, there lay a scarlet letter eyeing Mr Ive's unabashed manhood with wanton desire.",
-            "tgt": {
-                "process": "dom/WriteHtml_wl0id",
-                "port": "html"
             }
         },
         {
@@ -3182,13 +3252,6 @@
             "tgt": {
                 "process": "state face track",
                 "port": "string"
-            }
-        },
-        {
-            "data": "x.style.left = \"60%\"; return x;",
-            "tgt": {
-                "process": "core/MakeFunction_jarg2",
-                "port": "function"
             }
         },
         {
@@ -3320,6 +3383,41 @@
             "data": "x.style.top = \"-100px\";",
             "tgt": {
                 "process": "core/MakeFunction_c8yln",
+                "port": "function"
+            }
+        },
+        {
+            "data": "The Grid",
+            "tgt": {
+                "process": "SetHtml",
+                "port": "html"
+            }
+        },
+        {
+            "data": "Post From <i>Twitter</i>",
+            "tgt": {
+                "process": "SetHtml_o44qr",
+                "port": "html"
+            }
+        },
+        {
+            "data": "return Math.round(x*8);",
+            "tgt": {
+                "process": "core/MakeFunction_7rkjf",
+                "port": "function"
+            }
+        },
+        {
+            "data": "return [\"Forget WYSIWYG & DIY websites, The Grid does it for you.\",\"Goodbye templates, hello Layout Filters.\",\"The Internet can finally take it's place as the one & open Social Network #TheGrid.\",\"Social is the easy part. I want beauty & prosperity! I want #TheGrid!\",\"AI websites that design themselves.\",\"Holy sh!t, The Grid just spanked the Internet.\",\"Finally, a place I can call home on the web.\",\"Neutered fan pages no more.\"][x];",
+            "tgt": {
+                "process": "core/MakeFunction_ge2vz",
+                "port": "function"
+            }
+        },
+        {
+            "data": "x.style.left = \"65%\"; x.style.top = \"50%\"; return x;",
+            "tgt": {
+                "process": "core/MakeFunction_jarg2",
                 "port": "function"
             }
         }
