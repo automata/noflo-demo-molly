@@ -1,7 +1,7 @@
 {
     "properties": {
         "name": "main",
-        "id": "molly-demo-2/main",
+        "id": "7d0957ba3dfb740c45ba",
         "project": "molly-demo-2",
         "environment": {
             "type": "noflo-browser",
@@ -1390,8 +1390,7 @@
             "tgt": {
                 "process": "Src",
                 "port": "element"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1401,8 +1400,7 @@
             "tgt": {
                 "process": "Src",
                 "port": "value"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1451,8 +1449,7 @@
             "tgt": {
                 "process": "Draw_ut2rs",
                 "port": "commands"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1475,8 +1472,7 @@
             "tgt": {
                 "process": "Draw_ut2rs",
                 "port": "canvas"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1486,8 +1482,7 @@
             "tgt": {
                 "process": "core/Split_pr3su",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1510,8 +1505,7 @@
             "tgt": {
                 "process": "core/Drop_rg55i",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1521,8 +1515,7 @@
             "tgt": {
                 "process": "core/Drop_rg55i",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1532,8 +1525,7 @@
             "tgt": {
                 "process": "image/GetColors_hu9to",
                 "port": "canvas"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1569,8 +1561,7 @@
             "tgt": {
                 "process": "core/Split_qi3mw",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1593,8 +1584,7 @@
             "tgt": {
                 "process": "Hide",
                 "port": "element"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1643,8 +1633,7 @@
             "tgt": {
                 "process": "Append",
                 "port": "parent"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1693,8 +1682,7 @@
             "tgt": {
                 "process": "Append",
                 "port": "child"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1743,8 +1731,7 @@
             "tgt": {
                 "process": "core/Split_cedog",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1780,8 +1767,7 @@
             "tgt": {
                 "process": "DropErrors",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1843,8 +1829,7 @@
             "tgt": {
                 "process": "Fill_vet12",
                 "port": "items"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1867,8 +1852,7 @@
             "tgt": {
                 "process": "Stroke",
                 "port": "items"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1904,8 +1888,7 @@
             "tgt": {
                 "process": "core/Split_toazc",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1941,8 +1924,7 @@
             "tgt": {
                 "process": "state hello",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -1991,8 +1973,7 @@
             "tgt": {
                 "process": "SetBgColor",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2028,8 +2009,7 @@
             "tgt": {
                 "process": "DropErrors_2pjmt",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2364,8 +2344,7 @@
             "tgt": {
                 "process": "Append_jc7nh",
                 "port": "child"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2401,8 +2380,7 @@
             "tgt": {
                 "process": "Box",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2425,8 +2403,7 @@
             "tgt": {
                 "process": "SetColor",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2436,8 +2413,7 @@
             "tgt": {
                 "process": "SetStyle_fx6jw",
                 "port": "value"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2473,8 +2449,7 @@
             "tgt": {
                 "process": "core/MakeFunction_9cpa0",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2497,8 +2472,7 @@
             "tgt": {
                 "process": "dom/AppendChild_ddhhf",
                 "port": "child"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2534,8 +2508,7 @@
             "tgt": {
                 "process": "dom/SetAttribute_7ybkg",
                 "port": "value"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2545,8 +2518,7 @@
             "tgt": {
                 "process": "dom/AppendChild_zwdch",
                 "port": "child"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2657,8 +2629,7 @@
             "tgt": {
                 "process": "core/MakeFunction_ogrnd",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2681,8 +2652,7 @@
             "tgt": {
                 "process": "core/MakeFunction_twf1d",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2731,8 +2701,7 @@
             "tgt": {
                 "process": "Draw_az7c0",
                 "port": "canvas"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2742,8 +2711,7 @@
             "tgt": {
                 "process": "Draw_az7c0",
                 "port": "commands"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2766,8 +2734,7 @@
             "tgt": {
                 "process": "DrawImage_893gh",
                 "port": "image"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2777,8 +2744,7 @@
             "tgt": {
                 "process": "ToBottom",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2814,8 +2780,7 @@
             "tgt": {
                 "process": "ToTop",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2864,8 +2829,7 @@
             "tgt": {
                 "process": "core/MakeFunction_c8yln",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2888,8 +2852,7 @@
             "tgt": {
                 "process": "core/MakeFunction_7rkjf",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3029,8 +2992,7 @@
             "tgt": {
                 "process": "GetX",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3079,8 +3041,7 @@
             "tgt": {
                 "process": "Point",
                 "port": "x"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3090,8 +3051,7 @@
             "tgt": {
                 "process": "Point",
                 "port": "y"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3101,8 +3061,7 @@
             "tgt": {
                 "process": "FaceBox",
                 "port": "point"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3112,8 +3071,7 @@
             "tgt": {
                 "process": "FaceBox",
                 "port": "width"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3123,8 +3081,7 @@
             "tgt": {
                 "process": "FaceBox",
                 "port": "height"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3134,8 +3091,7 @@
             "tgt": {
                 "process": "Stroke_tywc3",
                 "port": "items"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3210,8 +3166,7 @@
             "tgt": {
                 "process": "core/Kick_oj3cr",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3221,8 +3176,7 @@
             "tgt": {
                 "process": "ToLeft",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3245,8 +3199,7 @@
             "tgt": {
                 "process": "core/Kick_ildyp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3340,13 +3293,6 @@
             }
         },
         {
-            "data": "I'm extracting colors...",
-            "tgt": {
-                "process": "state color extraction",
-                "port": "string"
-            }
-        },
-        {
             "data": true,
             "tgt": {
                 "process": "image/GetColors_hu9to",
@@ -3354,7 +3300,7 @@
             }
         },
         {
-            "data": "Designing for display on your website...",
+            "data": "<p class=\"css-typing\">Designing for display on your website...</p>",
             "tgt": {
                 "process": "state design",
                 "port": "string"
@@ -3501,13 +3447,6 @@
             }
         },
         {
-            "data": "Click to take a photo.",
-            "tgt": {
-                "process": "state shot",
-                "port": "string"
-            }
-        },
-        {
             "data": 2000,
             "tgt": {
                 "process": "core/RepeatDelayed_byb4b",
@@ -3613,7 +3552,7 @@
             }
         },
         {
-            "data": "Analyzing image features...",
+            "data": "<p class=\"css-typing\">Analyzing image features...</p>",
             "tgt": {
                 "process": "state face track",
                 "port": "string"
@@ -3637,7 +3576,7 @@
             }
         },
         {
-            "data": "Adjusting for detected features...",
+            "data": "<p class=\"css-typing\">Adjusting for detected features...</p>",
             "tgt": {
                 "process": "state adjust",
                 "port": "string"
@@ -3669,13 +3608,6 @@
             "tgt": {
                 "process": "core/MakeFunction_twf1d",
                 "port": "function"
-            }
-        },
-        {
-            "data": "It's done.",
-            "tgt": {
-                "process": "strings/SendString_e15ek",
-                "port": "string"
             }
         },
         {
@@ -3766,20 +3698,6 @@
             }
         },
         {
-            "data": "Hi, I'm Molly, your personal web designer. Click to start.",
-            "tgt": {
-                "process": "state hello",
-                "port": "string"
-            }
-        },
-        {
-            "data": "Please, let me use your camera... see the <i>allow</i> message?",
-            "tgt": {
-                "process": "state access cam",
-                "port": "string"
-            }
-        },
-        {
             "data": 500,
             "tgt": {
                 "process": "Delay_dn5k3",
@@ -3854,6 +3772,41 @@
             "tgt": {
                 "process": "ToLeft",
                 "port": "function"
+            }
+        },
+        {
+            "data": "<p class=\"css-typing\">Hi, want to see the AI in action?</p>",
+            "tgt": {
+                "process": "state hello",
+                "port": "string"
+            }
+        },
+        {
+            "data": "<p class=\"css-typing\">Great, I only need to use your camera. Can you click on the \"Allow\" message, please?</p>",
+            "tgt": {
+                "process": "state access cam",
+                "port": "string"
+            }
+        },
+        {
+            "data": "<p class=\"css-typing\">Now, just click to take a photo.</p>",
+            "tgt": {
+                "process": "state shot",
+                "port": "string"
+            }
+        },
+        {
+            "data": "<p class=\"css-typing\">I'm extracting a color palette...</p>",
+            "tgt": {
+                "process": "state color extraction",
+                "port": "string"
+            }
+        },
+        {
+            "data": "<p class=\"css-typing\">Do you want to see how it's made?</p>",
+            "tgt": {
+                "process": "strings/SendString_e15ek",
+                "port": "string"
             }
         }
     ]

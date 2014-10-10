@@ -4,25 +4,45 @@
     <meta charset="utf-8">
     <title>The Grid - Molly Demo</title>
     <script src="demomolly.js"></script>
+    <link rel="stylesheet" type="text/css" href="//s3-us-west-2.amazonaws.com/cdn.thegrid.io/fonts/fonts.css">
   </head>
   <body>
     <style>
+    .css-typing
+{
+    width: 60em;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 1s steps(60, end);
+    animation: type 1s steps(60, end);
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
       #molly {
-        position: absolute;
-        top: 40%;
-        left: 23%;
-        width: 50%;
+
+        position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:auto;
         z-index: 1000;
 
-        color: hsl(42, 84%, 69%);
-        font-size: 20px;
-        font-family: 'Source Code Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: rgb(58,38,25);
+        font-size: 32px;
+        font-family: 'National Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-weight: 2px;
         letter-spacing: 0.12em;
-        background-color: rgba(0,0,0,0.5);
         padding: 0 24px;
-        border: 2px hsl(42, 84%, 69%) solid;
-        line-height: 72px;
+
+        /*line-height: 72px;*/
         cursor: pointer;
         -webkit-transition: background-color 0.3s ease;
         -moz-transition: background-color 0.3s ease;
@@ -38,6 +58,9 @@
       #molly:hover {
           background-color: hsl(42, 84%, 69%);
           color: black;
+      }
+      #molly p{
+        text-align: center;
       }
       .hide {
         display: none;
@@ -81,22 +104,19 @@
         opacity: 1.0;
       }
       .box h2, h3, p {
-        margin-bottom: 1.6em;
         font-weight: normal;
       }
       .left {
         left: 60%;
       }
       /**************************/
-      @font-face {
-        font-family: "SourceCodePro";
-      }
+
       body {
         padding: 0px;
-        margin: 0px;
-        background-color: hsl(187, 45%, 5%);
-        color: hsl(42, 84%, 69%);
-        font-family: 'Source Code Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 0px; 
+        background-color: rgb(245, 236, 231);
+        color: rgb(58,38,25);
+        font-family: 'National Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-weight: 300;
 
         width: 100%;
@@ -116,7 +136,7 @@
       #source,#restart {
         color: hsl(42, 84%, 69%);
         font-size: 15px;
-        font-family: 'National Medium','Source Code Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'National Light','Source Code Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-weight: 72px;
         background-color: rgba(0,0,0,0.5);
         padding: 20px;
@@ -181,9 +201,9 @@
       <a id="restart" href="./">
         restart
       </a>
-      <a id="source" target="_blank" href="http://app.flowhub.io/#example/c2c84c5d8dd45a953a98">
+      <!-- <a id="source" target="_blank" href="http://app.flowhub.io/#example/7d0957ba3dfb740c45ba">
         view source graph
-      </a>
+      </a> -->
     </div>
 
     <script>
