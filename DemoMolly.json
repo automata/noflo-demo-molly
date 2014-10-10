@@ -223,7 +223,7 @@
             "metadata": {
                 "label": "AskForCam",
                 "x": -108,
-                "y": -72,
+                "y": -144,
                 "width": 72,
                 "height": 72
             }
@@ -253,7 +253,7 @@
             "metadata": {
                 "label": "core/Split",
                 "x": 180,
-                "y": -72,
+                "y": -144,
                 "width": 72,
                 "height": 72
             }
@@ -958,16 +958,6 @@
                 "height": 72
             }
         },
-        "core/Kick_hua34": {
-            "component": "core/Kick",
-            "metadata": {
-                "label": "core/Kick",
-                "x": 1224,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
-        },
         "CanvasPhoto": {
             "component": "dom/GetElement",
             "metadata": {
@@ -1352,7 +1342,7 @@
             "component": "gum/GetUserMedia",
             "metadata": {
                 "label": "gum/GetUserMedia",
-                "x": 324,
+                "x": 180,
                 "y": 1260,
                 "width": 72,
                 "height": 72
@@ -1364,6 +1354,26 @@
                 "label": "GateSource",
                 "x": 288,
                 "y": -396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Drop_qnf2f": {
+            "component": "core/Drop",
+            "metadata": {
+                "label": "core/Drop",
+                "x": 1440,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RepeatDelayed_eslml": {
+            "component": "core/RepeatDelayed",
+            "metadata": {
+                "label": "core/RepeatDelayed",
+                "x": 324,
+                "y": 1152,
                 "width": 72,
                 "height": 72
             }
@@ -2386,19 +2396,6 @@
         },
         {
             "src": {
-                "process": "dom/GetElement_6hmxd",
-                "port": "element"
-            },
-            "tgt": {
-                "process": "core/Kick_hua34",
-                "port": "data"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
                 "process": "CanvasPhoto",
                 "port": "element"
             },
@@ -3083,19 +3080,6 @@
         },
         {
             "src": {
-                "process": "core/Kick_hua34",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/MakeFunction_c8yln",
-                "port": "in"
-            },
-            "metadata": {
-                "route": null
-            }
-        },
-        {
-            "src": {
                 "process": "core/Split_ueh6p",
                 "port": "out"
             },
@@ -3160,17 +3144,6 @@
         {
             "src": {
                 "process": "gum/GetUserMedia_5c4jm",
-                "port": "url"
-            },
-            "tgt": {
-                "process": "core/Split_ueh6p",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "gum/GetUserMedia_5c4jm",
                 "port": "error"
             },
             "tgt": {
@@ -3203,19 +3176,6 @@
             },
             "metadata": {
                 "route": 5
-            }
-        },
-        {
-            "src": {
-                "process": "core/Split_tcirr",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Kick_hua34",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 4
             }
         },
         {
@@ -3268,6 +3228,54 @@
             },
             "metadata": {
                 "route": 1
+            }
+        },
+        {
+            "src": {
+                "process": "core/MakeFunction_c8yln",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Drop_qnf2f",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "gum/GetUserMedia_5c4jm",
+                "port": "url"
+            },
+            "tgt": {
+                "process": "core/RepeatDelayed_eslml",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/RepeatDelayed_eslml",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Split_ueh6p",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Split_ueh6p",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/MakeFunction_c8yln",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
             }
         },
         {
@@ -3826,13 +3834,6 @@
             }
         },
         {
-            "data": "x.style.top = \"70%\";",
-            "tgt": {
-                "process": "core/MakeFunction_c8yln",
-                "port": "function"
-            }
-        },
-        {
             "data": "x.style.left = \"65%\"; x.style.top = \"45%\"; return x;",
             "tgt": {
                 "process": "ToRight",
@@ -3851,6 +3852,20 @@
             "tgt": {
                 "process": "ShowSource",
                 "port": "string"
+            }
+        },
+        {
+            "data": 2000,
+            "tgt": {
+                "process": "core/RepeatDelayed_eslml",
+                "port": "delay"
+            }
+        },
+        {
+            "data": "document.getElementById(\"molly\").style.top = \"70%\"; return x;",
+            "tgt": {
+                "process": "core/MakeFunction_c8yln",
+                "port": "function"
             }
         }
     ]
