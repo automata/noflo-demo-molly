@@ -5,7 +5,7 @@
         "project": "molly-demo-2",
         "environment": {
             "type": "noflo-browser",
-            "content": "<style>\n  #molly {\n  \tcolor: #fff;\n  }\n  .hide {\n  \tdisplay: none;\n  }\n  .show {\n  \tdisplay: block;\n  }\n  .box {\n  \twidth: 200px;\n  \theight: 200px;\n  }\n</style>\n<div id=\"molly\">Hi, do you want to see the AI in action?</div>\n<div id=\"action\">Yes, let me see it!</div>\n<div id=\"restart\">No, take me back</div>\n<section>\n<video id=\"vid\" width=\"640\" height=\"480\" autoplay></video>\n<canvas id=\"can\" width=\"640\" height=\"480\"></canvas>\n<canvas id=\"canorig\" width=\"640\" height=\"480\"></canvas>\n</section>"
+            "content": "<style>\n  #molly {\n  \tcolor: #fff;\n  }\n  .hide {\n  \tdisplay: none;\n  }\n  .show {\n  \tdisplay: block;\n  }\n  .box {\n  \twidth: 200px;\n  \theight: 200px;\n  }\n</style>\n<div id=\"molly\">Hi, do you want to see the AI in action?</div>\n<div id=\"action\">Yes, let me see it!</div>\n<div id=\"source\">Yes, show me the source graph</div>\n<div id=\"restart\">No, take me back</div>\n<section>\n<video id=\"vid\" width=\"640\" height=\"480\" autoplay></video>\n<canvas id=\"can\" width=\"640\" height=\"480\"></canvas>\n<canvas id=\"canorig\" width=\"640\" height=\"480\"></canvas>\n</section>"
         },
         "icon": "",
         "changed": true
@@ -1328,16 +1328,6 @@
                 "height": 72
             }
         },
-        "ShowSource": {
-            "component": "strings/SendString",
-            "metadata": {
-                "label": "ShowSource",
-                "x": -324,
-                "y": 180,
-                "width": 72,
-                "height": 72
-            }
-        },
         "gum/GetUserMedia_5c4jm": {
             "component": "gum/GetUserMedia",
             "metadata": {
@@ -1374,6 +1364,36 @@
                 "label": "core/RepeatDelayed",
                 "x": 324,
                 "y": 1152,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "HideAction": {
+            "component": "core/MakeFunction",
+            "metadata": {
+                "label": "HideAction",
+                "x": 864,
+                "y": -108,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "ShowSource_wv1oy": {
+            "component": "core/MakeFunction",
+            "metadata": {
+                "label": "ShowSource",
+                "x": -252,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/MakeFunction_fnabw": {
+            "component": "core/MakeFunction",
+            "metadata": {
+                "label": "core/MakeFunction",
+                "x": 864,
+                "y": 0,
                 "width": 72,
                 "height": 72
             }
@@ -3119,30 +3139,6 @@
         },
         {
             "src": {
-                "process": "core/RepeatDelayed_f32g0",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "ShowSource",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 7
-            }
-        },
-        {
-            "src": {
-                "process": "ShowSource",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "SetContent",
-                "port": "html"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
                 "process": "gum/GetUserMedia_5c4jm",
                 "port": "error"
             },
@@ -3272,6 +3268,58 @@
             },
             "tgt": {
                 "process": "core/MakeFunction_c8yln",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "GateSource",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "HideAction",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/RepeatDelayed_f32g0",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "ShowSource_wv1oy",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 7
+            }
+        },
+        {
+            "src": {
+                "process": "GateCam",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "HideAction",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 2
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_ueh6p",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/MakeFunction_fnabw",
                 "port": "in"
             },
             "metadata": {
@@ -3848,13 +3896,6 @@
             }
         },
         {
-            "data": "Yes! Show me the source graph",
-            "tgt": {
-                "process": "ShowSource",
-                "port": "string"
-            }
-        },
-        {
             "data": 2000,
             "tgt": {
                 "process": "core/RepeatDelayed_eslml",
@@ -3865,6 +3906,27 @@
             "data": "document.getElementById(\"molly\").style.top = \"70%\"; return x;",
             "tgt": {
                 "process": "core/MakeFunction_c8yln",
+                "port": "function"
+            }
+        },
+        {
+            "data": "document.getElementById(\"action\").style.display = \"none\";",
+            "tgt": {
+                "process": "HideAction",
+                "port": "function"
+            }
+        },
+        {
+            "data": "document.getElementById(\"source\").style.display = \"inline\";",
+            "tgt": {
+                "process": "ShowSource_wv1oy",
+                "port": "function"
+            }
+        },
+        {
+            "data": "document.getElementById(\"action\").style.display = \"inline\";",
+            "tgt": {
+                "process": "core/MakeFunction_fnabw",
                 "port": "function"
             }
         }

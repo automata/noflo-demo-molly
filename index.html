@@ -87,11 +87,21 @@
         background-color: transparent;
         color: rgb(180, 151, 130);
       }
-      #action a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
+      #source {
+          display: none;
+          color: rgb(255, 255, 255);
+          cursor: pointer;
+          padding: 10px 20px;
+          border: 1px solid rgb(180, 151, 130);
+          background-color: rgb(180, 151, 130);
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: 0.06em;
+          z-index: 1000;
+          text-decoration: none;
       }
-      #action a:hover {
+      #source:hover {
+        background-color: transparent;
         color: rgb(180, 151, 130);
       }
       #restart:hover {
@@ -190,13 +200,14 @@
       <span id="action">
         Yes, let me see it!
       </span>
+      <a id="source" target="_blank" href="http://app.flowhub.io/#example/7d0957ba3dfb740c45ba">
+        Yes! Show me the source graph
+      </a>
       </div>
       <a id="restart" href="./">
         No, take me back
       </a>
-      <!-- <a id="source" target="_blank" href="http://app.flowhub.io/#example/7d0957ba3dfb740c45ba">
-        view source graph
-      </a> -->
+
     </div>
 
     <script>
