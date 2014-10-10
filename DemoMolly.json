@@ -5,7 +5,7 @@
         "project": "molly-demo-2",
         "environment": {
             "type": "noflo-browser",
-            "content": "<style>\n  #molly {\n  \tcolor: #fff;\n  }\n  .hide {\n  \tdisplay: none;\n  }\n  .show {\n  \tdisplay: block;\n  }\n  .box {\n  \twidth: 200px;\n  \theight: 200px;\n  }\n</style>\n<div id=\"molly\"></div>\n<section>\n<video id=\"vid\" width=\"640\" height=\"480\" autoplay></video>\n<canvas id=\"can\" width=\"640\" height=\"480\"></canvas>\n<canvas id=\"canorig\" width=\"640\" height=\"480\"></canvas>\n</section>"
+            "content": "<style>\n  #molly {\n  \tcolor: #fff;\n  }\n  .hide {\n  \tdisplay: none;\n  }\n  .show {\n  \tdisplay: block;\n  }\n  .box {\n  \twidth: 200px;\n  \theight: 200px;\n  }\n</style>\n<div id=\"molly\">Hi, do you want to see the AI in action?</div>\n<div id=\"action\">Yes, let me see it!</div>\n<div id=\"restart\">No, take me back</div>\n<section>\n<video id=\"vid\" width=\"640\" height=\"480\" autoplay></video>\n<canvas id=\"can\" width=\"640\" height=\"480\"></canvas>\n<canvas id=\"canorig\" width=\"640\" height=\"480\"></canvas>\n</section>"
         },
         "icon": "",
         "changed": true
@@ -49,23 +49,14 @@
         },
         {
             "name": "control molly clicks",
-            "nodes": [
-                "SendClickCam",
-                "SendClickShot",
-                "flow/Gate_w2344",
-                "interaction/ListenMouse_hny4c"
-            ],
+            "nodes": [],
             "metadata": {
                 "description": ""
             }
         },
         {
             "name": "lipsum",
-            "nodes": [
-                "core/MakeFunction_7rkjf",
-                "core/MakeFunction_ge2vz",
-                "math/Random_wqtzn"
-            ],
+            "nodes": [],
             "metadata": {
                 "description": ""
             }
@@ -168,7 +159,6 @@
         {
             "name": "camera",
             "nodes": [
-                "Camera",
                 "DropErrors_2pjmt",
                 "Show",
                 "Src",
@@ -187,7 +177,6 @@
                 "core/RepeatDelayed_f32g0",
                 "core/RepeatDelayed_ieiw6",
                 "core/RepeatDelayed_u3c0u",
-                "core/RunTimeout_8251e",
                 "core/Split_cedog",
                 "core/Split_pr3su",
                 "core/Split_qi3mw",
@@ -195,28 +184,13 @@
                 "core/Split_toazc",
                 "core/Split_utfbq",
                 "core/Split_zxg95",
-                "state access cam",
+                "AskForCam",
                 "state adjust",
                 "state color extraction",
                 "state design",
                 "state face track",
-                "state hello",
-                "state shot",
+                "AskForShot",
                 "strings/SendString_e15ek"
-            ],
-            "metadata": {
-                "description": ""
-            }
-        },
-        {
-            "name": "show/hide molly",
-            "nodes": [
-                "core/Kick_gahno",
-                "core/Kick_hua34",
-                "core/Kick_j40x3",
-                "core/MakeFunction_c8yln",
-                "core/MakeFunction_ogrnd",
-                "core/MakeFunction_twf1d"
             ],
             "metadata": {
                 "description": ""
@@ -234,16 +208,6 @@
                 "height": 72
             }
         },
-        "Camera": {
-            "component": "gum/GetUserMedia",
-            "metadata": {
-                "label": "Camera",
-                "x": 504,
-                "y": 1188,
-                "width": 72,
-                "height": 72
-            }
-        },
         "dom/WriteHtml_36rf1": {
             "component": "dom/WriteHtml",
             "metadata": {
@@ -254,21 +218,11 @@
                 "height": 72
             }
         },
-        "state hello": {
+        "AskForCam": {
             "component": "strings/SendString",
             "metadata": {
-                "label": "state hello",
-                "x": 72,
-                "y": -180,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "state access cam": {
-            "component": "strings/SendString",
-            "metadata": {
-                "label": "state access cam",
-                "x": 72,
+                "label": "AskForCam",
+                "x": -108,
                 "y": -72,
                 "width": 72,
                 "height": 72
@@ -314,10 +268,10 @@
                 "height": 72
             }
         },
-        "state shot": {
+        "AskForShot": {
             "component": "strings/SendString",
             "metadata": {
-                "label": "state shot",
+                "label": "AskForShot",
                 "x": -108,
                 "y": 36,
                 "width": 72,
@@ -684,16 +638,6 @@
                 "height": 72
             }
         },
-        "core/RunTimeout_8251e": {
-            "component": "core/RunTimeout",
-            "metadata": {
-                "label": "core/RunTimeout",
-                "x": -108,
-                "y": -180,
-                "width": 72,
-                "height": 72
-            }
-        },
         "Show": {
             "component": "dom/RemoveClass",
             "metadata": {
@@ -734,42 +678,12 @@
                 "height": 72
             }
         },
-        "interaction/ListenMouse_hny4c": {
-            "component": "interaction/ListenMouse",
-            "metadata": {
-                "label": "interaction/ListenMouse",
-                "x": 684,
-                "y": -504,
-                "width": 72,
-                "height": 72
-            }
-        },
         "DropErrors_2pjmt": {
             "component": "core/Drop",
             "metadata": {
                 "label": "DropErrors",
                 "x": 504,
                 "y": 1296,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "SendClickCam": {
-            "component": "flow/Gate",
-            "metadata": {
-                "label": "SendClickCam",
-                "x": 540,
-                "y": -504,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "SendClickShot": {
-            "component": "flow/Gate",
-            "metadata": {
-                "label": "SendClickShot",
-                "x": 540,
-                "y": -396,
                 "width": 72,
                 "height": 72
             }
@@ -830,16 +744,6 @@
                 "label": "core/RepeatDelayed",
                 "x": -108,
                 "y": 576,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "flow/Gate_w2344": {
-            "component": "flow/Gate",
-            "metadata": {
-                "label": "flow/Gate",
-                "x": 540,
-                "y": -288,
                 "width": 72,
                 "height": 72
             }
@@ -1054,37 +958,7 @@
                 "height": 72
             }
         },
-        "core/MakeFunction_ogrnd": {
-            "component": "core/MakeFunction",
-            "metadata": {
-                "label": "core/MakeFunction",
-                "x": 1332,
-                "y": -36,
-                "width": 72,
-                "height": 72
-            }
-        },
         "core/Kick_hua34": {
-            "component": "core/Kick",
-            "metadata": {
-                "label": "core/Kick",
-                "x": 1224,
-                "y": -36,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/MakeFunction_twf1d": {
-            "component": "core/MakeFunction",
-            "metadata": {
-                "label": "core/MakeFunction",
-                "x": 1332,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/Kick_j40x3": {
             "component": "core/Kick",
             "metadata": {
                 "label": "core/Kick",
@@ -1169,47 +1043,7 @@
             "metadata": {
                 "label": "core/MakeFunction",
                 "x": 1332,
-                "y": -180,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/Kick_gahno": {
-            "component": "core/Kick",
-            "metadata": {
-                "label": "core/Kick",
-                "x": 1224,
-                "y": -180,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "math/Random_wqtzn": {
-            "component": "math/Random",
-            "metadata": {
-                "label": "math/Random",
-                "x": 2628,
-                "y": 1080,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/MakeFunction_7rkjf": {
-            "component": "core/MakeFunction",
-            "metadata": {
-                "label": "core/MakeFunction",
-                "x": 2736,
-                "y": 1080,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/MakeFunction_ge2vz": {
-            "component": "core/MakeFunction",
-            "metadata": {
-                "label": "core/MakeFunction",
-                "x": 2844,
-                "y": 1080,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -1353,6 +1187,186 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "ActionButton": {
+            "component": "dom/GetElement",
+            "metadata": {
+                "label": "ActionButton",
+                "x": -144,
+                "y": -540,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "SetContent": {
+            "component": "dom/WriteHtml",
+            "metadata": {
+                "label": "SetContent",
+                "x": -144,
+                "y": -432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "GetClick": {
+            "component": "interaction/ListenMouse",
+            "metadata": {
+                "label": "GetClick",
+                "x": 36,
+                "y": -648,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "GateCam": {
+            "component": "flow/Gate",
+            "metadata": {
+                "label": "GateCam",
+                "x": 288,
+                "y": -648,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "Restart Button": {
+            "component": "dom/GetElement",
+            "metadata": {
+                "label": "Restart Button",
+                "x": 576,
+                "y": -540,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "SetContent_8x9gi": {
+            "component": "dom/WriteHtml",
+            "metadata": {
+                "label": "SetContent",
+                "x": 576,
+                "y": -432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "WriteRestart": {
+            "component": "strings/SendString",
+            "metadata": {
+                "label": "WriteRestart",
+                "x": 468,
+                "y": -432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "TakePhoto": {
+            "component": "strings/SendString",
+            "metadata": {
+                "label": "TakePhoto",
+                "x": -360,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "GateShot": {
+            "component": "flow/Gate",
+            "metadata": {
+                "label": "GateShot",
+                "x": 288,
+                "y": -540,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "Kick_zyxkx": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "Kick",
+                "x": 432,
+                "y": -288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "HideActionButton": {
+            "component": "dom/AddClass",
+            "metadata": {
+                "label": "HideActionButton",
+                "x": 540,
+                "y": -288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_yk9h8": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 432,
+                "y": -180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "dom/RemoveClass_h4qm0": {
+            "component": "dom/RemoveClass",
+            "metadata": {
+                "label": "dom/RemoveClass",
+                "x": 540,
+                "y": -180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Split_y3jcq": {
+            "component": "core/Split",
+            "metadata": {
+                "label": "core/Split",
+                "x": 36,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Split_ueh6p": {
+            "component": "core/Split",
+            "metadata": {
+                "label": "core/Split",
+                "x": 468,
+                "y": 1188,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "ShowSource": {
+            "component": "strings/SendString",
+            "metadata": {
+                "label": "ShowSource",
+                "x": -324,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "gum/GetUserMedia_5c4jm": {
+            "component": "gum/GetUserMedia",
+            "metadata": {
+                "label": "gum/GetUserMedia",
+                "x": 324,
+                "y": 1260,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "GateSource": {
+            "component": "flow/Gate",
+            "metadata": {
+                "label": "GateSource",
+                "x": 288,
+                "y": -396,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -1371,19 +1385,6 @@
         },
         {
             "src": {
-                "process": "state hello",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "dom/WriteHtml_36rf1",
-                "port": "html"
-            },
-            "metadata": {
-                "route": 5
-            }
-        },
-        {
-            "src": {
                 "process": "Video",
                 "port": "element"
             },
@@ -1394,17 +1395,7 @@
         },
         {
             "src": {
-                "process": "Camera",
-                "port": "url"
-            },
-            "tgt": {
-                "process": "Src",
-                "port": "value"
-            }
-        },
-        {
-            "src": {
-                "process": "state access cam",
+                "process": "AskForCam",
                 "port": "out"
             },
             "tgt": {
@@ -1412,7 +1403,7 @@
                 "port": "in"
             },
             "metadata": {
-                "route": 0
+                "route": 3
             }
         },
         {
@@ -1423,19 +1414,6 @@
             "tgt": {
                 "process": "dom/WriteHtml_36rf1",
                 "port": "html"
-            },
-            "metadata": {
-                "route": 5
-            }
-        },
-        {
-            "src": {
-                "process": "core/Split_utfbq",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "Camera",
-                "port": "start"
             },
             "metadata": {
                 "route": 5
@@ -1607,19 +1585,6 @@
             "tgt": {
                 "process": "core/Kick_1fxrg",
                 "port": "in"
-            },
-            "metadata": {
-                "route": 5
-            }
-        },
-        {
-            "src": {
-                "process": "core/Split_tcirr",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "Camera",
-                "port": "stop"
             },
             "metadata": {
                 "route": 5
@@ -1918,16 +1883,6 @@
         },
         {
             "src": {
-                "process": "core/RunTimeout_8251e",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "state hello",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
                 "process": "core/Kick_2jp5d",
                 "port": "out"
             },
@@ -1937,19 +1892,6 @@
             },
             "metadata": {
                 "route": null
-            }
-        },
-        {
-            "src": {
-                "process": "state shot",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "dom/WriteHtml_36rf1",
-                "port": "html"
-            },
-            "metadata": {
-                "route": 5
             }
         },
         {
@@ -1986,133 +1928,6 @@
             },
             "metadata": {
                 "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "dom/GetElement_6hmxd",
-                "port": "element"
-            },
-            "tgt": {
-                "process": "interaction/ListenMouse_hny4c",
-                "port": "element"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "Camera",
-                "port": "error"
-            },
-            "tgt": {
-                "process": "DropErrors_2pjmt",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "Camera",
-                "port": "url"
-            },
-            "tgt": {
-                "process": "state shot",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "interaction/ListenMouse_hny4c",
-                "port": "click"
-            },
-            "tgt": {
-                "process": "SendClickCam",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
-                "process": "SendClickCam",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "state access cam",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
-                "process": "state hello",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "SendClickCam",
-                "port": "open"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
-                "process": "state shot",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "SendClickCam",
-                "port": "close"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
-                "process": "state shot",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "SendClickShot",
-                "port": "open"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
-                "process": "interaction/ListenMouse_hny4c",
-                "port": "click"
-            },
-            "tgt": {
-                "process": "SendClickShot",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
-                "process": "SendClickShot",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Split_tcirr",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 4
             }
         },
         {
@@ -2221,19 +2036,6 @@
         },
         {
             "src": {
-                "process": "core/Split_tcirr",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "SendClickShot",
-                "port": "close"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
                 "process": "core/RepeatDelayed_f32g0",
                 "port": "out"
             },
@@ -2260,19 +2062,6 @@
         },
         {
             "src": {
-                "process": "interaction/ListenMouse_hny4c",
-                "port": "click"
-            },
-            "tgt": {
-                "process": "flow/Gate_w2344",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
                 "process": "strings/SendString_e15ek",
                 "port": "out"
             },
@@ -2295,32 +2084,6 @@
             },
             "metadata": {
                 "route": 5
-            }
-        },
-        {
-            "src": {
-                "process": "flow/Gate_w2344",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "state access cam",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
-                "process": "core/Split_utfbq",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "flow/Gate_w2344",
-                "port": "close"
-            },
-            "metadata": {
-                "route": 4
             }
         },
         {
@@ -2623,16 +2386,6 @@
         },
         {
             "src": {
-                "process": "core/Kick_hua34",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/MakeFunction_ogrnd",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
                 "process": "dom/GetElement_6hmxd",
                 "port": "element"
             },
@@ -2642,55 +2395,6 @@
             },
             "metadata": {
                 "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "core/Kick_j40x3",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/MakeFunction_twf1d",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "dom/GetElement_6hmxd",
-                "port": "element"
-            },
-            "tgt": {
-                "process": "core/Kick_j40x3",
-                "port": "data"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "core/Split_utfbq",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Kick_j40x3",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
-                "process": "core/Split_tcirr",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Kick_hua34",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 4
             }
         },
         {
@@ -2806,91 +2510,6 @@
             },
             "metadata": {
                 "route": 5
-            }
-        },
-        {
-            "src": {
-                "process": "core/Split_zxg95",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Kick_gahno",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 5
-            }
-        },
-        {
-            "src": {
-                "process": "core/Kick_gahno",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/MakeFunction_c8yln",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "dom/GetElement_6hmxd",
-                "port": "element"
-            },
-            "tgt": {
-                "process": "core/Kick_gahno",
-                "port": "data"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "math/Random_wqtzn",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/MakeFunction_7rkjf",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "core/MakeFunction_7rkjf",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/MakeFunction_ge2vz",
-                "port": "in"
-            },
-            "metadata": {
-                "route": null
-            }
-        },
-        {
-            "src": {
-                "process": "core/MakeFunction_ge2vz",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "dom/WriteHtml_wl0id",
-                "port": "html"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "core/MakeFunction_9cpa0",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "math/Random_wqtzn",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 0
             }
         },
         {
@@ -3241,6 +2860,417 @@
             }
         },
         {
+            "src": {
+                "process": "ActionButton",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "SetContent",
+                "port": "container"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "ActionButton",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "GetClick",
+                "port": "element"
+            },
+            "metadata": {
+                "route": 1
+            }
+        },
+        {
+            "src": {
+                "process": "GetClick",
+                "port": "click"
+            },
+            "tgt": {
+                "process": "GateCam",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 5
+            }
+        },
+        {
+            "src": {
+                "process": "GateCam",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "AskForCam",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 2
+            }
+        },
+        {
+            "src": {
+                "process": "AskForCam",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "GateCam",
+                "port": "close"
+            },
+            "metadata": {
+                "route": 3
+            }
+        },
+        {
+            "src": {
+                "process": "ActionButton",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "GateCam",
+                "port": "open"
+            },
+            "metadata": {
+                "route": 1
+            }
+        },
+        {
+            "src": {
+                "process": "Restart Button",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "SetContent_8x9gi",
+                "port": "container"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "GateCam",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "WriteRestart",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 2
+            }
+        },
+        {
+            "src": {
+                "process": "WriteRestart",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "SetContent_8x9gi",
+                "port": "html"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "TakePhoto",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "SetContent",
+                "port": "html"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "GetClick",
+                "port": "click"
+            },
+            "tgt": {
+                "process": "GateShot",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 5
+            }
+        },
+        {
+            "src": {
+                "process": "GateShot",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Split_tcirr",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 10
+            }
+        },
+        {
+            "src": {
+                "process": "ActionButton",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "GateShot",
+                "port": "close"
+            },
+            "metadata": {
+                "route": 1
+            }
+        },
+        {
+            "src": {
+                "process": "Kick_zyxkx",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "HideActionButton",
+                "port": "element"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Kick_yk9h8",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "dom/RemoveClass_h4qm0",
+                "port": "element"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "AskForShot",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Split_y3jcq",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 9
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_y3jcq",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "GateShot",
+                "port": "open"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Split_y3jcq",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "dom/WriteHtml_36rf1",
+                "port": "html"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/Kick_hua34",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/MakeFunction_c8yln",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_ueh6p",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "Src",
+                "port": "value"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_ueh6p",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "TakePhoto",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_ueh6p",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "AskForShot",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/RepeatDelayed_f32g0",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "ShowSource",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 7
+            }
+        },
+        {
+            "src": {
+                "process": "ShowSource",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "SetContent",
+                "port": "html"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "gum/GetUserMedia_5c4jm",
+                "port": "url"
+            },
+            "tgt": {
+                "process": "core/Split_ueh6p",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "gum/GetUserMedia_5c4jm",
+                "port": "error"
+            },
+            "tgt": {
+                "process": "DropErrors_2pjmt",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Split_tcirr",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "gum/GetUserMedia_5c4jm",
+                "port": "stop"
+            },
+            "metadata": {
+                "route": 4
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_utfbq",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "gum/GetUserMedia_5c4jm",
+                "port": "start"
+            },
+            "metadata": {
+                "route": 5
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_tcirr",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Kick_hua34",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 4
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_tcirr",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "GateShot",
+                "port": "close"
+            },
+            "metadata": {
+                "route": 4
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_tcirr",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "GateSource",
+                "port": "open"
+            },
+            "metadata": {
+                "route": 4
+            }
+        },
+        {
+            "src": {
+                "process": "GetClick",
+                "port": "click"
+            },
+            "tgt": {
+                "process": "GateSource",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 5
+            }
+        },
+        {
+            "src": {
+                "process": "ActionButton",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "GateSource",
+                "port": "close"
+            },
+            "metadata": {
+                "route": 1
+            }
+        },
+        {
             "data": "#molly",
             "tgt": {
                 "process": "dom/GetElement_6hmxd",
@@ -3297,13 +3327,6 @@
             "tgt": {
                 "process": "image/GetColors_hu9to",
                 "port": "css"
-            }
-        },
-        {
-            "data": "<p class=\"css-typing\">Designing for display on your website...</p>",
-            "tgt": {
-                "process": "state design",
-                "port": "string"
             }
         },
         {
@@ -3416,13 +3439,6 @@
             "tgt": {
                 "process": "Stroke_tywc3",
                 "port": "strokestyle"
-            }
-        },
-        {
-            "data": 100,
-            "tgt": {
-                "process": "core/RunTimeout_8251e",
-                "port": "time"
             }
         },
         {
@@ -3552,13 +3568,6 @@
             }
         },
         {
-            "data": "<p class=\"css-typing\">Analyzing image features...</p>",
-            "tgt": {
-                "process": "state face track",
-                "port": "string"
-            }
-        },
-        {
             "data": false,
             "tgt": {
                 "process": "Draw",
@@ -3576,13 +3585,6 @@
             }
         },
         {
-            "data": "<p class=\"css-typing\">Adjusting for detected features...</p>",
-            "tgt": {
-                "process": "state adjust",
-                "port": "string"
-            }
-        },
-        {
             "data": 5,
             "tgt": {
                 "process": "image/GetColors_hu9to",
@@ -3594,20 +3596,6 @@
             "tgt": {
                 "process": "image/GetColors_hu9to",
                 "port": "quality"
-            }
-        },
-        {
-            "data": "x.style.top = \"10px\";",
-            "tgt": {
-                "process": "core/MakeFunction_ogrnd",
-                "port": "function"
-            }
-        },
-        {
-            "data": "x.style.top = \"40%\";",
-            "tgt": {
-                "process": "core/MakeFunction_twf1d",
-                "port": "function"
             }
         },
         {
@@ -3652,48 +3640,6 @@
             "data": "x.style.zIndex = 200;",
             "tgt": {
                 "process": "ToTop",
-                "port": "function"
-            }
-        },
-        {
-            "data": "x.style.top = \"-100px\";",
-            "tgt": {
-                "process": "core/MakeFunction_c8yln",
-                "port": "function"
-            }
-        },
-        {
-            "data": "The Grid",
-            "tgt": {
-                "process": "SetHtml",
-                "port": "html"
-            }
-        },
-        {
-            "data": "Post From <i>Twitter</i>",
-            "tgt": {
-                "process": "SetHtml_o44qr",
-                "port": "html"
-            }
-        },
-        {
-            "data": "return Math.round(x*7);",
-            "tgt": {
-                "process": "core/MakeFunction_7rkjf",
-                "port": "function"
-            }
-        },
-        {
-            "data": "return [\"Forget WYSIWYG & DIY websites, The Grid does it for you.\",\"Goodbye templates, hello Layout Filters.\",\"The Internet can finally take it's place as the one & open Social Network #TheGrid.\",\"Social is the easy part. I want beauty & prosperity! I want #TheGrid!\",\"AI websites that design themselves.\",\"Holy sh!t, The Grid just spanked the Internet.\",\"Finally, a place I can call home on the web.\",\"Neutered fan pages no more.\"][x];",
-            "tgt": {
-                "process": "core/MakeFunction_ge2vz",
-                "port": "function"
-            }
-        },
-        {
-            "data": "x.style.left = \"65%\"; x.style.top = \"50%\"; return x;",
-            "tgt": {
-                "process": "ToRight",
                 "port": "function"
             }
         },
@@ -3768,44 +3714,142 @@
             }
         },
         {
-            "data": "x.style.left = \"5%\"; x.style.top = \"50%\"; return x;",
+            "data": "All in just a few seconds. Imagine all the possibilities!",
             "tgt": {
-                "process": "ToLeft",
-                "port": "function"
+                "process": "dom/WriteHtml_wl0id",
+                "port": "html"
             }
         },
         {
-            "data": "<p class=\"css-typing\">Hi, want to see the AI in action?</p>",
+            "data": "As simple as that!",
             "tgt": {
-                "process": "state hello",
+                "process": "SetHtml_o44qr",
+                "port": "html"
+            }
+        },
+        {
+            "data": "Beautiful",
+            "tgt": {
+                "process": "SetHtml",
+                "port": "html"
+            }
+        },
+        {
+            "data": "Great, I just need to use your camera. Can you click on the \"Allow\" message, please?",
+            "tgt": {
+                "process": "AskForCam",
                 "port": "string"
             }
         },
         {
-            "data": "<p class=\"css-typing\">Great, I only need to use your camera. Can you click on the \"Allow\" message, please?</p>",
+            "data": "Now, just click to take a photo.",
             "tgt": {
-                "process": "state access cam",
+                "process": "AskForShot",
                 "port": "string"
             }
         },
         {
-            "data": "<p class=\"css-typing\">Now, just click to take a photo.</p>",
+            "data": "Do you want to see how it's made?",
             "tgt": {
-                "process": "state shot",
+                "process": "strings/SendString_e15ek",
                 "port": "string"
             }
         },
         {
-            "data": "<p class=\"css-typing\">I'm extracting a color palette...</p>",
+            "data": "I'm extracting colors...",
             "tgt": {
                 "process": "state color extraction",
                 "port": "string"
             }
         },
         {
-            "data": "<p class=\"css-typing\">Do you want to see how it's made?</p>",
+            "data": "Designing for display on your website...",
             "tgt": {
-                "process": "strings/SendString_e15ek",
+                "process": "state design",
+                "port": "string"
+            }
+        },
+        {
+            "data": "Analyzing image features...",
+            "tgt": {
+                "process": "state face track",
+                "port": "string"
+            }
+        },
+        {
+            "data": "Adjusting for detected features...",
+            "tgt": {
+                "process": "state adjust",
+                "port": "string"
+            }
+        },
+        {
+            "data": "#action",
+            "tgt": {
+                "process": "ActionButton",
+                "port": "selector"
+            }
+        },
+        {
+            "data": "#restart",
+            "tgt": {
+                "process": "Restart Button",
+                "port": "selector"
+            }
+        },
+        {
+            "data": "Restart",
+            "tgt": {
+                "process": "WriteRestart",
+                "port": "string"
+            }
+        },
+        {
+            "data": "Take photo",
+            "tgt": {
+                "process": "TakePhoto",
+                "port": "string"
+            }
+        },
+        {
+            "data": "hide",
+            "tgt": {
+                "process": "HideActionButton",
+                "port": "class"
+            }
+        },
+        {
+            "data": "hide",
+            "tgt": {
+                "process": "dom/RemoveClass_h4qm0",
+                "port": "class"
+            }
+        },
+        {
+            "data": "x.style.top = \"70%\";",
+            "tgt": {
+                "process": "core/MakeFunction_c8yln",
+                "port": "function"
+            }
+        },
+        {
+            "data": "x.style.left = \"65%\"; x.style.top = \"45%\"; return x;",
+            "tgt": {
+                "process": "ToRight",
+                "port": "function"
+            }
+        },
+        {
+            "data": "x.style.left = \"5%\"; x.style.top = \"45%\"; return x;",
+            "tgt": {
+                "process": "ToLeft",
+                "port": "function"
+            }
+        },
+        {
+            "data": "Yes! Show me the source graph",
+            "tgt": {
+                "process": "ShowSource",
                 "port": "string"
             }
         }
