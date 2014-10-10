@@ -2,9 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>The Grid - Molly Demo</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="http://s3-us-west-2.amazonaws.com/cdn.thegrid.io/fixtures/images/no_more_zuck.png">
+    <meta property="og:title" content="The AI Demo">
+    <meta property="og:site_name" content="The Grid">
+    <meta property="og:type" content="website">
+    <meta property="og:app_id" content="1517733501804443">
+    <title>The Grid | The AI Demo</title>
+
     <script src="demomolly.js"></script>
     <link rel="stylesheet" type="text/css" href="//s3-us-west-2.amazonaws.com/cdn.thegrid.io/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://passport.thegrid.io/favicon.ico">
   </head>
   <body>
     <style>
@@ -54,7 +63,7 @@
           box-sizing: border-box;
           color: rgb(213,  181, 159);
           position: absolute;
-          bottom: 10px;
+          bottom: 3%;
           left: 25%;
           width: 50%;
           min-width: 144px;
@@ -67,7 +76,7 @@
         box-sizing: border-box;
         width: 50%;
         left: 25%;
-        bottom: 8%;
+        bottom: 10%;
         min-width: 144px;
         text-align: center;
         z-index: 1000;
@@ -105,6 +114,23 @@
         color: rgb(180, 151, 130);
       }
       #restart:hover {
+        color: rgb(180, 151, 130);
+      }
+      #source {
+          display: none;
+          color: rgb(255, 255, 255);
+          cursor: pointer;
+          padding: 10px 20px;
+          border: 1px solid rgb(180, 151, 130);
+          background-color: rgb(180, 151, 130);
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: 0.06em;
+          z-index: 1000;
+          text-decoration: none;
+      }
+      #source:hover {
+        background-color: transparent;
         color: rgb(180, 151, 130);
       }
       .hide {
@@ -153,7 +179,34 @@
       .left {
         left: 60%;
       }
-
+      .back {
+        position: fixed;
+        top: 50px;
+        left: 12px;
+        width: 36px;
+        height: 36px;
+        border-radius: 36px;
+        border: 2px solid #aaa;
+        color: #aaa;
+        text-align: center;
+        padding: 0;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translate3d(0,0,0);
+      }
+      .back i {
+        margin: 10px 0 0 0;
+      }
+      .back a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .back:hover {
+        background-color: #aaa;
+        color: #000;
+      }
+      .back:hover i {
+        opacity: .3;
+      }
       body {
         padding: 0px;
         margin: 0px; 
@@ -190,6 +243,11 @@
     </style>
 
     <div id="app">
+      <a class="back" href="../">
+        <i class="fa fa-arrow-left">
+
+        </i>
+      </a>
       <div id="molly">
         Hi, want to see the AI in action?
       </div>
@@ -207,7 +265,10 @@
       <a id="restart" href="./">
         No, take me back
       </a>
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     </div>
 
     <script>
