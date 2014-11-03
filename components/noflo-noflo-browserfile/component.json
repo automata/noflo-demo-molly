@@ -1,0 +1,26 @@
+{
+  "name": "noflo-browserfile",
+  "description": "Components to File API.",
+  "author": "Vilson Vieira <vilson@void.cc>",
+  "repo": "vilson/noflo-browserfile",
+  "version": "0.1.0",
+  "keywords": [],
+  "dependencies": {
+    "noflo/noflo": "*"
+  },
+  "remotes": [
+    "https://raw.githubusercontent.com"
+  ],
+  "scripts": [
+    "index.js",
+    "components/ReadFile.coffee"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "noflo": {
+    "components": {
+      "ReadFile": "components/ReadFile.coffee"
+    }
+  }
+}

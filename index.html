@@ -19,11 +19,11 @@
     <style>
     .css-typing
 {
-    width: 60em;
+    width: 10em;
     white-space:nowrap;
     overflow:hidden;
-    -webkit-animation: type 1s steps(60, end);
-    animation: type 1s steps(60, end);
+    -webkit-animation: type 1s steps(50, end);
+    animation: type 1s steps(50, end);
 }
 
 @keyframes type{
@@ -230,12 +230,18 @@
         min-height: 400px;
         min-width: 500px;
       }
-
       #can, #vid, #canorig {
         position: absolute;
         top: 10px;
         left: 25%;
         z-index: 100;        
+        transition:all 0.5s ease-in-out;
+        -webkit-transition:all 0.5s ease-in-out;
+      }
+      #canorig:hover {
+        opacity: 0;
+        transition:all 0.5s ease-in-out;
+        -webkit-transition:all 0.5s ease-in-out;
       }
       #canorig {
         z-index: 0;
@@ -249,7 +255,7 @@
         </i>
       </a>
       <div id="molly">
-        Hi, want to see the AI in action?
+        <span class="css-typing">Hi, want to see the AI in action?</span>
       </div>
       <video id="vid" width="640" height="480" autoplay></video>
       <canvas id="can" width="640" height="480"></canvas>

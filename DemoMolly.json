@@ -1,7 +1,7 @@
 {
     "properties": {
         "name": "main",
-        "id": "7d0957ba3dfb740c45ba",
+        "id": "9fcd4e59bc16685eab13",
         "project": "molly-demo-2",
         "environment": {
             "type": "noflo-browser",
@@ -195,6 +195,23 @@
             "metadata": {
                 "description": ""
             }
+        },
+        {
+            "name": "drop images",
+            "nodes": [
+                "GetDataTransfer",
+                "GetFiles",
+                "GetFirst_tv6js",
+                "Ignore",
+                "ListenDragEnd",
+                "ListenDrop",
+                "ReadFile",
+                "core/Split_3afys",
+                "image/UrlToCanvas_i4phz"
+            ],
+            "metadata": {
+                "description": ""
+            }
         }
     ],
     "processes": {
@@ -202,7 +219,7 @@
             "component": "dom/GetElement",
             "metadata": {
                 "label": "dom/GetElement",
-                "x": 936,
+                "x": 864,
                 "y": -396,
                 "width": 72,
                 "height": 72
@@ -212,7 +229,7 @@
             "component": "dom/WriteHtml",
             "metadata": {
                 "label": "dom/WriteHtml",
-                "x": 936,
+                "x": 864,
                 "y": -288,
                 "width": 72,
                 "height": 72
@@ -233,7 +250,7 @@
             "metadata": {
                 "label": "Video",
                 "x": 612,
-                "y": 1080,
+                "y": 1044,
                 "width": 72,
                 "height": 72
             }
@@ -682,7 +699,7 @@
             "component": "core/Drop",
             "metadata": {
                 "label": "DropErrors",
-                "x": 504,
+                "x": 468,
                 "y": 1296,
                 "width": 72,
                 "height": 72
@@ -1032,8 +1049,8 @@
             "component": "core/MakeFunction",
             "metadata": {
                 "label": "core/MakeFunction",
-                "x": 1332,
-                "y": 72,
+                "x": 612,
+                "y": 1440,
                 "width": 72,
                 "height": 72
             }
@@ -1333,7 +1350,7 @@
             "metadata": {
                 "label": "gum/GetUserMedia",
                 "x": 180,
-                "y": 1260,
+                "y": 1188,
                 "width": 72,
                 "height": 72
             }
@@ -1352,8 +1369,8 @@
             "component": "core/Drop",
             "metadata": {
                 "label": "core/Drop",
-                "x": 1440,
-                "y": 72,
+                "x": 720,
+                "y": 1440,
                 "width": 72,
                 "height": 72
             }
@@ -1363,7 +1380,7 @@
             "metadata": {
                 "label": "core/RepeatDelayed",
                 "x": 324,
-                "y": 1152,
+                "y": 1188,
                 "width": 72,
                 "height": 72
             }
@@ -1373,7 +1390,7 @@
             "metadata": {
                 "label": "HideAction",
                 "x": 864,
-                "y": -108,
+                "y": -144,
                 "width": 72,
                 "height": 72
             }
@@ -1382,8 +1399,8 @@
             "component": "core/MakeFunction",
             "metadata": {
                 "label": "ShowSource",
-                "x": -252,
-                "y": 216,
+                "x": 72,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -1392,7 +1409,97 @@
             "component": "core/MakeFunction",
             "metadata": {
                 "label": "core/MakeFunction",
-                "x": 864,
+                "x": 612,
+                "y": 1548,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "ListenDragEnd": {
+            "component": "dom/Listen",
+            "metadata": {
+                "label": "ListenDragEnd",
+                "x": 1224,
+                "y": -36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "ListenDrop": {
+            "component": "dom/Listen",
+            "metadata": {
+                "label": "ListenDrop",
+                "x": 1224,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "GetDataTransfer": {
+            "component": "objects/ExtractProperty",
+            "metadata": {
+                "label": "GetDataTransfer",
+                "x": 1368,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "GetFiles": {
+            "component": "objects/ExtractProperty",
+            "metadata": {
+                "label": "GetFiles",
+                "x": 1512,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "GetFirst_tv6js": {
+            "component": "core/MakeFunction",
+            "metadata": {
+                "label": "GetFirst",
+                "x": 1656,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "ReadFile": {
+            "component": "browserfile/ReadFile",
+            "metadata": {
+                "label": "ReadFile",
+                "x": 1800,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "Ignore": {
+            "component": "core/Drop",
+            "metadata": {
+                "label": "Ignore",
+                "x": 1368,
+                "y": -36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "image/UrlToCanvas_i4phz": {
+            "component": "image/UrlToCanvas",
+            "metadata": {
+                "label": "image/UrlToCanvas",
+                "x": 1944,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Split_3afys": {
+            "component": "core/Split",
+            "metadata": {
+                "label": "core/Split",
+                "x": 1044,
                 "y": 0,
                 "width": 72,
                 "height": 72
@@ -1447,16 +1554,6 @@
             },
             "metadata": {
                 "route": 5
-            }
-        },
-        {
-            "src": {
-                "process": "DrawImage_cb9t0",
-                "port": "drawimage"
-            },
-            "tgt": {
-                "process": "Draw_ut2rs",
-                "port": "commands"
             }
         },
         {
@@ -2962,8 +3059,7 @@
             "tgt": {
                 "process": "SetContent_8x9gi",
                 "port": "container"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2986,8 +3082,7 @@
             "tgt": {
                 "process": "SetContent_8x9gi",
                 "port": "html"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -2997,8 +3092,7 @@
             "tgt": {
                 "process": "SetContent",
                 "port": "html"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3047,8 +3141,7 @@
             "tgt": {
                 "process": "HideActionButton",
                 "port": "element"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3058,8 +3151,7 @@
             "tgt": {
                 "process": "dom/RemoveClass_h4qm0",
                 "port": "element"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3082,8 +3174,7 @@
             "tgt": {
                 "process": "GateShot",
                 "port": "open"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3145,8 +3236,7 @@
             "tgt": {
                 "process": "DropErrors_2pjmt",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3234,8 +3324,7 @@
             "tgt": {
                 "process": "core/Drop_qnf2f",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3258,8 +3347,7 @@
             "tgt": {
                 "process": "core/Split_ueh6p",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -3324,6 +3412,137 @@
             },
             "metadata": {
                 "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "ListenDragEnd",
+                "port": "event"
+            },
+            "tgt": {
+                "process": "Ignore",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "ListenDrop",
+                "port": "event"
+            },
+            "tgt": {
+                "process": "GetDataTransfer",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "GetDataTransfer",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "GetFiles",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "GetFiles",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "GetFirst_tv6js",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "GetFirst_tv6js",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "ReadFile",
+                "port": "file"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "ReadFile",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "image/UrlToCanvas_i4phz",
+                "port": "url"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "image/UrlToCanvas_i4phz",
+                "port": "canvas"
+            },
+            "tgt": {
+                "process": "DrawImage_cb9t0",
+                "port": "image"
+            },
+            "metadata": {
+                "route": 7
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_3afys",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "ListenDragEnd",
+                "port": "element"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Split_3afys",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "ListenDrop",
+                "port": "element"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "CanvasFeatures",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "core/Split_3afys",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 7
+            }
+        },
+        {
+            "src": {
+                "process": "DrawImage_cb9t0",
+                "port": "drawimage"
+            },
+            "tgt": {
+                "process": "Draw_ut2rs",
+                "port": "commands"
+            },
+            "metadata": {
+                "route": null
             }
         },
         {
@@ -3798,13 +4017,6 @@
             }
         },
         {
-            "data": "Now, just click to take a photo.",
-            "tgt": {
-                "process": "AskForShot",
-                "port": "string"
-            }
-        },
-        {
             "data": "Do you want to see how it's made?",
             "tgt": {
                 "process": "strings/SendString_e15ek",
@@ -3928,6 +4140,62 @@
             "tgt": {
                 "process": "core/MakeFunction_fnabw",
                 "port": "function"
+            }
+        },
+        {
+            "data": true,
+            "tgt": {
+                "process": "ListenDragEnd",
+                "port": "preventdefault"
+            }
+        },
+        {
+            "data": "drop",
+            "tgt": {
+                "process": "ListenDrop",
+                "port": "type"
+            }
+        },
+        {
+            "data": true,
+            "tgt": {
+                "process": "ListenDrop",
+                "port": "preventdefault"
+            }
+        },
+        {
+            "data": "dataTransfer",
+            "tgt": {
+                "process": "GetDataTransfer",
+                "port": "key"
+            }
+        },
+        {
+            "data": "files",
+            "tgt": {
+                "process": "GetFiles",
+                "port": "key"
+            }
+        },
+        {
+            "data": "return x[0];",
+            "tgt": {
+                "process": "GetFirst_tv6js",
+                "port": "function"
+            }
+        },
+        {
+            "data": "dragover",
+            "tgt": {
+                "process": "ListenDragEnd",
+                "port": "type"
+            }
+        },
+        {
+            "data": "Now, just click to take a photo. You can also drop images.",
+            "tgt": {
+                "process": "AskForShot",
+                "port": "string"
             }
         }
     ]

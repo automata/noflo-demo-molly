@@ -18,7 +18,8 @@
     "noflo/noflo-ccv": "*",
     "noflo/noflo-canvas": "*",
     "automata/noflo-geometry": "*",
-    "automata/noflo-color": "*"
+    "automata/noflo-color": "*",
+    "noflo/noflo-browserfile": "*"
   },
  "scripts": [
   "DemoMolly.json"
